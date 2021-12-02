@@ -1,0 +1,149 @@
+
+
+
+/* styling for contact page header */
+.contact-navbar{
+    
+    /* remove section and add class active for restart section */
+    display: none;
+    &.active{
+        display: inline-block;
+    }
+
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    // add Style for scroll class.
+    .head-nav{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 10px 20px;
+        transition: 1s all ease;
+        // styling for muno button
+        .muno-button{
+            position: absolute;
+            right: 40px;
+            color: $second-color;
+            opacity: .9;
+            font-size: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            z-index: 10;
+            display: none;
+        }
+        // styling for Header Logo.
+        .logo{
+            width: 40px;
+            margin-left: 15px;
+        }
+        // styling for muno List
+        .muno{
+            display: flex;
+            transition: all .3s ease;
+            li{
+                padding: 0 15px;
+            }
+            a{
+                font-size: 1.2rem;
+                font-weight: 600;
+                font-family: $primory-font-family-Poppins;
+                color: $primory-color;
+                opacity: .8;
+                border-bottom: 2px solid transparent;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    color: $primory-color;
+                    opacity: 1;
+                    border-bottom: 2px solid $primory-color;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* styling for contact page Footer Section */
+.contact-footer{
+    font-size: 1.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: absolute;
+    top: 91%;
+    left: 0%;
+    z-index: 2;
+
+    transition: all 1s ease-in-out;
+
+    .copyreat-home{
+        width: 85%;
+        margin-left: 15px;
+        opacity: .8;
+        h4{
+            color: rgb(0, 0, 0);
+
+            span{
+                color: $primory-color;
+                opacity: .9;
+            }
+        }
+
+    }
+
+
+    /* styleng for social icons */
+    .aside-social{
+        padding-top: 10px;
+        a{
+            margin-top: 15px;
+            color: $primory-color;
+            font-size: 1.1rem;
+            text-align: center;
+
+
+            .icon-1{
+                padding: 8.5px 10px;
+                margin-right: 5px;
+                border-radius: 30%;
+                &:hover{
+                    color: white;
+                    background-image: linear-gradient(40deg, #0765f3, #ff9100);                    
+                }
+            }
+
+            .icon-2{
+                padding: 9px 9px;
+                margin-right: 5px;
+                width: 38px;
+                border-radius: 30%;
+                &:hover{
+                    color: white;
+                    background-image: linear-gradient(200deg,#ff9100, #b41b28);
+                    
+                }
+            }
+
+            .icon-3{
+                padding: 8.5px 8.5px;
+                width: 38px;
+                border-radius: 30%;
+                &:hover{
+                    color: white;
+                    background-image: linear-gradient(40deg, #2283af, #ff9100);
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,528 @@
+
+
+/* styleng for services section */
+
+.section-services{
+    height: 100vh;
+    width: 100%;
+    background-color: white !important;
+    perspective: 600px;
+    transform-style: preserve-3d;
+
+    /* remove section and add class active for restart section */
+    display: none;
+    &.active{
+        display: inline-block;
+    }
+
+
+    // styleng for services header. 
+    .head-s-services{
+        font-family: $primory-font-family-Poppins;
+        font-weight: 700;
+        font-size: 3rem;
+        color: black;
+        text-align: center;
+        margin-bottom: 25px;
+        position: relative;
+        opacity: 0;
+
+        transition: opacity 1s ease-out;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            width: 320px;
+            padding: 3px 0;
+            background-color: crimson;
+        }
+        &::after{
+            content: "What I do";
+            font-size: .95rem;
+            color: crimson;
+            background-color: white;
+            position: absolute;
+            top: 90%;
+            left: 46%;
+            padding: 0 4px;
+        }
+    }
+
+    // styleng for services blogs.
+    .cards{            
+        height: 80vh;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        
+        // styleng for mix blog.
+        .card{
+            width: 30%;
+            height: 50vh;
+            max-height: 50vh;
+            margin: 0 15px;
+            padding: 20px 20px;
+            border-radius: 2px;
+            cursor: pointer;
+            opacity: .9;
+            border: rgba(201, 15, 52, 0.2) solid .5px;
+            transition: all .8s ease-in-out;
+
+            // styleng for mix icon blogs
+            .icon{
+                color: $primory-color;
+                font-size: 2.5rem;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                transition: all .3s ease-in-out;
+            }
+            
+            // styleng for mix header bolgs
+            .header-card{
+                color: black;
+                font-family: $primory-font-family-Poppins;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 10px;
+                opacity: .9;
+                transition: all .5s ease;
+            }
+
+            // styleng for mix text blogs
+            .text{
+                color: black;
+                font-family: $second-font-family-Ubuntu;
+                font-size: 1.1rem;
+                font-weight: 400;
+                margin-bottom: 40px;
+                opacity: .8;
+            }
+
+            .learn-more{
+                color:crimson;
+                font-size: 1.1rem;
+                font-family: $second-font-family-Ubuntu;
+                font-weight: 500;
+                transition: all .3s ease;
+                &:hover{
+                    color: $primory-color;
+                    text-decoration: wavy;
+                }
+            }
+
+            &:first-child, &:last-child{
+                margin-top: 5rem;
+            }
+        }
+
+        // styleng for card-wep-development.
+        .card-wep-development{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-100px);
+        }
+
+        // styleng for  card-web-design.
+        .card-web-design{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+        }
+
+        // styleng for  card-e-commers.
+        .card-e-commers{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(100px);
+        }
+
+        // creat styleng for hover mix blogs.
+        .card:hover{
+            opacity: 1;
+            box-shadow: 0px 0px 10px 0.1px rgba(255, 255, 255, .1);
+            transform: scale(1.05);
+            background-color: rgba(220, 20, 60, 0.9);
+            transition: all .3s ease-in;
+            padding-bottom: 5px;
+
+            // styleng for mix icon blogs
+            .icon{
+                color: white;
+                font-size: 2.8rem;
+                opacity: 1;
+
+            }
+
+            // styleng hover for mix header bolgs
+            .header-card{
+                color: white;
+                opacity: 1;
+            }
+
+            .text{
+                color: rgba(255, 255, 255, 0.9);
+                opacity: .9;
+            }
+
+            .learn-more{
+                color: rgba(255, 255, 255, 0.85);
+                position: relative;
+                margin-bottom: 10px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 110%;
+                    left: 0;
+                    width: 100%;
+                    background-color: rgba(255, 255, 255, 0.95);
+                    padding: 1.5px 0;
+                    margin-bottom: 15px;
+                }
+                &:hover{
+                    color: white;
+                    &::before{
+                        background-color: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+
+    // creat On scroll 
+    &.scroll{
+        // styleng for services header. 
+        .head-s-services{
+            // styleng animetion for services header.
+            opacity: 1;
+        }
+
+        // styleng for services blogs.
+        .cards{ 
+            // styleng for card-wep-development.
+            .card-wep-development{
+                // styleng animetion for services header.
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            // styleng for  card-web-design.
+            .card-web-design{
+                // styleng animetion for services header.
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0);
+            
+            }
+
+            // styleng for  card-e-commers.
+            .card-e-commers{
+                // styleng animetion for services header
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* Creat Media Query For Services Section */
+
+
+
+// media for down 1090px.
+@media (max-width: 1090px){
+    /* styleng for services section */
+        //  services section don't has styleng in screen size 1090px.
+} 
+
+
+
+// media for down 900px 
+@media (max-width: 910px) {
+    
+    /* styleng for services section */
+
+    .section-services{
+        // styleng for services header.
+        .head-s-services{
+            font-size: 2.5rem;
+            margin-top: 15px;
+            &::before{
+                width: 245px;
+            }
+            &::after{
+                font-size: 1.05rem;
+                left: 45%;
+            }
+        }
+
+        // styleng for services blogs.
+        .cards{
+            margin: 40px 0;
+            padding: 0 20px;
+            padding-bottom: 20px;
+
+
+            // styleng for mix blog.
+            .card{
+                width: 100%;
+                margin: 25px 0;
+                padding: 20px 5px;
+                box-shadow: 0px 0px 10px 0.1px rgba(143, 143, 143, 0.1);
+                opacity: 1;
+
+                // styleng for mix icon blogs
+                .icon{
+                    font-size: 2.5rem;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    opacity: 1;
+                }
+
+                // styleng for mix header bolgs
+                .header-card{
+                    font-size: 1.15rem;
+                    margin-bottom: 5px;
+                    opacity: 1;
+                }
+
+                // styleng for mix text blogs
+                .text{
+                    font-size: 1.05rem;
+                    margin-bottom: 10px;
+                }
+
+                .learn-more{
+                    font-size: 1.1rem;
+                    text-decoration: underline;
+                    opacity: .95;
+                }
+
+
+                // creat styleng for hover mix blogs.
+                &:hover{
+                    opacity: 1;
+                    transform: scale(1);
+
+                    // styleng for mix icon blogs
+                    .icon{
+                        font-size: 2.5rem;
+
+                    }
+
+                    // styleng hover for mix header bolgs
+                    .header-card{
+                        color: black;
+                        opacity: 1;
+                    }
+
+                    .text{
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// media for down 745px
+@media (max-width: 745px) {
+ 
+    /* styleng for services section */
+    .section-services{
+        // styleng for services header.
+        .head-s-services{
+            font-size: 2rem;
+            margin-top: 15px;
+            &::before{
+                width: 198px;
+            }
+            &::after{
+                font-size: 1rem;
+                left: 43%;
+            }
+        }
+
+        // styleng for services blogs.
+        .cards{
+            // styleng for mix blog.
+            .card{
+                margin: 30px 0;
+                // styleng for mix icon blogs
+                .icon{
+                    font-size: 2.3rem;
+                    margin-top: 5px;
+                    margin-bottom: 4px;
+                }
+
+                // styleng for mix header bolgs
+                .header-card{
+                    margin-bottom: 4px;
+                }
+
+                // styleng for mix text blogs
+                .text{
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* media for down 600px */
+@media (max-width: 600px) {
+
+/* styleng for services section */
+    //  services section don't has styleng in screen size 600px.
+
+}
+
+
+
+
+/* media for down 540px */
+@media (max-width: 540px) {
+
+/* styleng for services section */
+    .section-services{
+        // styleng for services blogs.
+        .cards{
+            margin: 45px 0;
+            padding: 0 20px;
+
+
+            // styleng for mix blog.
+            .card{
+                margin: 30px 0;
+                padding: 15px 5px;
+
+                // styleng for mix icon blogs
+                .icon{
+                    font-size: 2rem;
+                }
+
+                // styleng for mix header bolgs
+                .header-card{
+                    font-size: 1.14rem;
+                }
+
+                // styleng for mix text blogs
+                .text{
+                    font-size: 1rem;
+                }
+
+                .learn-more{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* media for down 440px */
+@media (max-width: 440px) {
+  
+/* styleng for services section */
+    .section-services{
+        // styleng for services header.
+        .head-s-services{
+            &::after{
+                font-size: .9rem;
+                left: 40%;
+            }
+        }
+        // styleng for services blogs.
+        .cards{
+            margin: 30px 0;
+            padding: 15px 20px;
+
+
+            // styleng for mix blog.
+            .card{
+                margin: 20px 0;
+                padding: 15px 5px;
+
+                // styleng for mix icon blogs
+                .icon{
+                    margin-top: 2px;
+                    font-size: 2rem;
+                }
+
+                // styleng for mix header bolgs
+                .header-card{
+                    font-size: 1.1rem;
+                }
+
+                // styleng for mix text blogs
+                .text{
+                    font-size: 1rem;
+                }
+
+                .learn-more{
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* media for down 378px */
+@media (max-width: 378px) {
+
+/* styleng for services section */
+    .section-services{
+        // styleng for services header.
+        .head-s-services{
+            &::after{
+                font-size: .9rem;
+                left: 40%;
+            }
+        }
+        // styleng for services blogs.
+        .cards{
+            margin: 25px 0;
+            padding: 10px 20px;
+
+
+            // styleng for mix blog.
+            .card{
+                margin: 20px 0;
+                padding: 15px 5px;
+
+                // styleng for mix icon blogs
+                .icon{
+                    font-size: 1.9rem;
+                }
+
+                // styleng for mix header bolgs
+                .header-card{
+                    font-size: 1.1rem;
+                }
+
+                // styleng for mix text blogs
+                .text{
+                    font-size: .9rem;
+                }
+
+                .learn-more{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}

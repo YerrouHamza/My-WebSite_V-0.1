@@ -1,0 +1,740 @@
+
+/* Creat animation for on load web site */
+.load-page{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    background-color: rgb(26, 21, 21);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    z-index: 100;
+    
+    
+    overflow: hidden;
+    .load-content{
+        position: absolute;
+        top: 20vh;
+        left: 15px;
+        z-index: 1;
+        // styleng for text 1
+        .text-1{
+            font-size: 3rem;
+            position: relative;
+            width: max-content;
+            margin-left: 23%;
+            margin-top: 15%;
+            overflow: hidden;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+            
+            &::before{
+                overflow: hidden;
+                background: rgb(26, 21, 21);
+                width: 100%;
+
+            }
+
+            &::after{
+                overflow: hidden;
+                width: .3rem;
+                background-color: rgb(200, 220, 20);
+            }
+        }
+
+
+        // styleng for text 2
+        .text-2{
+            font-size: 3.5rem;
+            position: relative;
+            width: max-content;
+            margin-left: 23%;
+            margin-top: 3%;
+
+            // creat hidden and then visibilty
+            visibility: hidden;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+            
+            &::before{
+                overflow: hidden;
+                background: rgb(26, 21, 21);
+                width: 100%;
+
+            }
+
+            &::after{
+                overflow: hidden;
+                width: .3rem;
+                background-color: rgb(200, 220, 20);
+            }
+        }
+
+
+
+        // styleng for text 3
+        .text-3{
+            font-size: 2.5rem;
+            position: relative;
+            width: max-content;
+            margin-left: 12%;
+            margin-top: 5%;
+
+            // creat hidden and then visibilty
+            visibility: hidden;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+            
+            &::before{
+                overflow: hidden;
+                background-color: rgb(26, 21, 21);
+                width: 100%;
+
+            }
+
+            &::after{
+                overflow: hidden;
+                width: .3rem;
+                background-color: rgb(200, 220, 20);
+            }
+        }
+
+
+
+        // styleng for text 4 
+        .text-4{
+            font-size: 2rem;
+            position: relative;
+            width: max-content;
+            margin-left: 35%;
+            margin-top: 5%;
+            padding: 3px 7px;
+
+            .button{
+                a{
+                    padding: 3px 7px;
+                    cursor: pointer !important;
+                }
+            }
+
+            // creat hidden and then visibilty
+            visibility: hidden;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+            
+            &::before{
+                overflow: hidden;
+                background-color: rgb(26, 21, 21);
+                width: 100%;
+
+            }
+
+            &::after{
+                overflow: hidden;
+                width: .3rem;
+                background-color: rgb(200, 220, 20);
+            }
+        }
+    }
+
+    /* styling for background image */
+    .home-picture{
+
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        bottom: 15px;
+        right: 60px;
+        z-index: 1;
+
+        .first-picture {
+            width: 529px;
+            position: absolute;
+            bottom: -25px;
+            left: -26px;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .secound-picture {
+            opacity: .2;
+            width: 482px;
+        }
+    }
+    
+    /* styleng for footer */
+    .home-footer{
+        
+        visibility: hidden;
+        opacity: 0;
+        
+        font-size: 1.1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        position: absolute;
+        top: 91%;
+        left: 0%;
+        z-index: 2;
+
+        transition: all 1s ease-in-out;
+
+        .copyreat-home{
+            width: 85%;
+            margin-left: 15px;
+            opacity: .8;
+            h4{
+                color: rgb(214, 214, 214);
+
+                span{
+                    color: $primory-color;
+                    opacity: .9;
+                }
+            }
+
+        }
+
+        // styleng for scroll down popup.
+        .scroll-down{
+            width: 20%;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            display: flex;
+            .scroll-text{
+                font-size: .8rem;
+                font-weight: 600;
+                position: absolute;
+                top: 5px;
+                left: 44px;
+                color: $primory-color;
+                opacity: .8;
+            }
+
+            .icon{
+                position: relative;
+                .col-left{
+                    position: absolute;
+                    inset: 0;
+                    .s-icon-1{
+                        font-size: 1.2rem;
+                        color: rgba(255, 255, 255, .8);
+                    }
+                }
+    
+                .col-right{
+                    position: absolute;
+                    top: -10px;
+                    left: 0px;
+                    padding: 5px 15px;
+                    .s-icon-2{
+                        font-size: .8rem;
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+        }
+
+        /* styleng for social icons */
+        .aside-social{
+            padding-top: 10px;
+            a{
+                margin-top: 15px;
+                color: $primory-color;
+                font-size: 1.1rem;
+                text-align: center;
+
+
+                .icon-1{
+                    padding: 8.5px 10px;
+                    margin-right: 5px;
+                    border-radius: 30%;
+                    &:hover{
+                        color: white;
+                        background-image: linear-gradient(40deg, #0765f3, #ff9100);                    
+                    }
+                }
+
+                .icon-2{
+                    padding: 9px 9px;
+                    margin-right: 5px;
+                    width: 38px;
+                    border-radius: 30%;
+                    &:hover{
+                        color: white;
+                        background-image: linear-gradient(200deg,#ff9100, #b41b28);
+                        
+                    }
+                }
+
+                .icon-3{
+                    padding: 8.5px 8.5px;
+                    width: 38px;
+                    border-radius: 30%;
+                    &:hover{
+                        color: white;
+                        background-image: linear-gradient(40deg, #2283af, #ff9100);
+                        
+                    }
+                }
+                
+                .icon-4{
+                    padding: 8.5px 8.5px;
+                    width: 38px;
+                    border-radius: 30%;
+                    &:hover{
+                        color: white;
+                        background-image: linear-gradient(40deg, #5c5c5c, #ff9100);
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /** creat active class if click for after load page **/
+    &.active{
+
+        .load-content{
+
+            // styleng for text 1
+            .text-1{
+                animation: anime-text1 1.5s 4s forwards,  //-
+                anime-text1-second 1s 10s forwards,  //-
+                anime-text1-last 1.5s 17.5s forwards; //-
+                
+                &::before{
+                    animation: typeng-text1 3s steps(24) 1s forwards; //--
+    
+                }
+    
+                &::after{
+                    animation: bank-typeng-text1 3s steps(24) 1s forwards, //--
+                    bank .6s steps(24) infinite;
+                }
+    
+            }
+    
+    
+            // styleng for text 2
+            .text-2{
+    
+                // creat hidden and then visibilty
+                animation: text-2-visibility 0s 5.5s forwards, //-
+                anime-text2 1.5s 8.5s forwards,  //-
+                anime-text2-last 1.5s 17.5s forwards; //-
+                 
+                &::before{
+                    animation: typeng-text2 3s steps(27) 5.5s forwards; //--
+    
+                }
+    
+                &::after{
+                    animation: bank-typeng-text2 3s steps(27) 5.5s forwards, //--
+                    bank .6s steps(27) 5.5s infinite;
+                }
+    
+                
+            }
+    
+    
+    
+            // styleng for text 3
+            .text-3{
+                // creat hidden and then visibilty
+                animation: text-2-visibility 0s 11s forwards, //-
+                anime-text3 1.5s 14s forwards, //-
+                anime-text3-last 1.5s 17.5s forwards; //-
+                
+                &::before{
+                    animation: typeng-text2 3s steps(43) 11s forwards; //--
+    
+                }
+    
+                &::after{
+                    animation: bank-typeng-text2 3s steps(43) 11s forwards, //--
+                    bank .6s steps(43) 11s infinite;
+                }
+            }
+    
+    
+    
+            // styleng for text 4 
+            .text-4{
+                // creat hidden and then visibilty
+                animation: text-2-visibility 0s 15.5s forwards, //-
+                anime-text4 1.5s 17.5s forwards; //-
+                
+                &::before{
+                    animation: typeng-text4 1.5s steps(26) 15.5s forwards; //--
+    
+                }
+    
+                &::after{
+                    animation: typeng-text4 1.5s steps(26) 15.5s forwards, //--
+                    bank .6s steps(26) 15.5s infinite;
+                }
+            }
+        }
+
+
+        /* styling for background image */
+        .home-picture{
+            animation: show-animation 1.5s 17.5s forwards; //-
+        }
+        
+        /* styleng for footer */
+        .home-footer{
+            animation: show-animation 1.5s 17.5s forwards; //-
+
+            /* creat styleng for scroll down*/
+            .scroll-down{
+                
+                .scroll-text{
+                    animation: flash-anime 1s infinite; //--
+                }
+
+                .col-right{
+                    .s-icon-2{
+                        animation: icon-down 1s infinite, //--
+                        flash-anime 1s infinite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* styleng for span's */
+.br-1 {
+    color: rgb(255, 166, 0);
+}
+
+.br-2{
+    color: rgb(5, 57, 201);
+}
+
+.br-3{
+    color: rgba(128, 0, 128, 0.6);
+    
+}
+
+.point{
+    color: rgba(220, 20, 60, 0.7);
+}
+
+.tag-1, .tag-b-1{
+    color: crimson;
+}
+
+
+
+.name{
+    text-decoration: rgba(128, 0, 128, .7) underline;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+}
+
+.toll-1{
+    text-decoration: crimson underline;
+    font-weight: 600;
+}
+
+.toll-2{
+    color: crimson;
+    font-weight: 600;
+}
+
+.content-button{
+    color: white;
+    background-color: rgba(128, 0, 128, .6);
+    font-weight: 700;
+    cursor: auto;
+    padding: 0px 4px;
+    border-radius: 3px;
+    pointer-events: visible;
+    &:hover{
+        background-color: rgba(128, 0, 128, .8);
+    }
+}
+
+
+
+/********************* creat animetion *****************************/
+
+
+        // creat typeng animation for text-1
+    @keyframes typeng-text1 {
+        
+        0%{
+            left: 0%;
+        }
+
+        25%{
+            left: 35%;
+        }
+
+        30%{
+            left: 35%;
+        }
+
+        80%{
+            left: 100%;
+        }
+
+        90%{
+            left: 100%;
+        }
+
+        100%{
+            left: 100%;
+        }
+    }
+
+
+        // creat bank animation for text 1.
+    @keyframes bank-typeng-text1 {
+        
+        0%{
+            left: 0%;
+        }
+
+        25%{
+            left: 35%;
+        }
+
+        30%{
+            left: 35%;
+        }
+
+        80%{
+            left: 100%;
+        }
+
+        90%{
+            left: 100%;
+            opacity: .5;
+        }
+
+        100%{
+            left: 100%;
+            opacity: 0;
+        }
+    }
+
+    // creat first changeng place animation for text-1
+    @keyframes anime-text1 {
+        to{
+
+            font-size: 1.5rem;
+            margin-left: 18%;
+            margin-top: 15%;
+        }
+    }
+
+    // creat second changeng place animation for text-1
+    @keyframes anime-text1-second {
+        to{
+
+            font-size: 1.5rem;
+            margin-left: 18%;
+            margin-top: 13%;
+        }
+    }
+
+    // creat Last changeng place animation for text-1
+    @keyframes anime-text1-last {
+        to{
+
+            font-size: 1.3rem;
+            margin-left: 12%;
+            margin-top: 16%;
+        }
+    }
+
+
+
+    // creat animation for text 2
+
+
+        // creat animtion visibility for text 2
+    @keyframes text-2-visibility {
+
+        to {
+            visibility: visible;
+        }
+    }
+
+        // creat animation typeng for text 2
+    @keyframes typeng-text2 {
+        
+        0%{
+            left: 0%;
+        }
+
+        80%{
+            left: 100%;
+        }
+
+        90%{
+            left: 100%;
+        }
+
+        100%{
+            left: 100%;
+        }
+
+    }
+
+        // creat bank animation for text 2.
+    @keyframes bank-typeng-text2 {
+
+        0%{
+            left: 0%;
+        }
+
+        80%{
+            left: 100%;
+        }
+
+        90%{
+            left: 100%;
+            opacity: .5;
+        }
+
+        100%{
+            left: 100%;
+            opacity: 0;
+        }
+    }
+
+    // creat changeng place animation for text 2
+    @keyframes anime-text2 {
+
+        to{
+            font-size: 3rem;
+            margin-left: 8%;
+            margin-top: 1%;
+        }
+    }
+
+    // creat Last changeng place animation for text 2
+    @keyframes anime-text2-last {
+
+        100% {
+            font-size: 2.8rem;
+            margin-left: 2%;
+            margin-top: 1%;
+        }
+    }
+
+
+
+
+
+    // creat animation for text 3
+            // creat animation typeng for text 3
+
+    
+        // creat changeng place animation for text-3
+        @keyframes anime-text3 {
+    
+            to{
+                font-size: 1.7rem;
+                margin-left: 18%;
+                margin-top: 2%;
+            }
+        }
+
+        // creat Last changeng place animation for text-3
+        @keyframes anime-text3-last {
+            
+            to{
+                font-size: 1.5em;
+                margin-left: 12%;
+                margin-top: 1.6%;
+            }
+        }
+
+
+    // creat animation for text 4
+        // creat animation typeng for text 4
+        @keyframes typeng-text4 {
+            to{
+                left: 100%;
+            }
+    
+        }
+
+        // creat changeng place animation for text 4
+        @keyframes anime-text4 {
+
+            to{
+                font-size: 1.5rem;
+                margin-left: 13%;
+                margin-top: 4%;
+            }
+        }
+
+/* creat bank */
+@keyframes bank {
+
+    0%{
+        background-color: transparent;
+    }
+}
+
+
+
+
+
+    /* creat animation for scroll */
+
+        // background home picture & footer 
+        @keyframes show-animation {
+            to{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        // icon down animation
+        @keyframes icon-down {
+            to{
+                transform: translateY(10px);
+            }
+        }

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+
+/*  styleng for home page */
+.first-page{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+.secound-page{
+    position: absolute;
+        top: 100vh;
+        left: 0;
+    z-index: 2;
+}
+
+
+
+/* Variables */
+    // color variables
+$primory-color: crimson;
+$second-color: rgb(233, 197, 204);
+
+    // font variables
+$primory-font-family-Poppins:'Source Code Pro', monospace;
+$second-font-family-Ubuntu: 'Fira Code', monospace;
+$second-font-family-Sans: 'Encode Sans Condensed', sans-serif;
+
+
+    // Mix Variable For H2 Sections Style
+@mixin h2-style(){
+    font-family: $primory-font-family-Poppins;
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        width: 295px;
+        padding: 5px 0;
+        background-color: white;
+    }
+    &::after{
+        content: "What I do";
+        font-size: .75rem;
+        color: crimson;
+        background-color: black;
+        position: absolute;
+        top: 89%;
+        left: 46%;
+        padding: 0 5px;
+    }
+
+}
+
+
+/* styleng for home page */
+
+    /* styleng for On load */
+
+        @import './_after-load.scss';
+
+
+    /* styleng for On load */
+
+        @import './_home.scss';
+
+    /* styleng for Header */
+
+        @import './_Header.scss';
+
+    /* styleng for about section */
+
+        @import './_about-Section.scss';
+
+
+    /* styleng for services section */
+
+        @import './_services-Section.scss';
+
+
+    /* styleng for Skills section */
+
+        @import './_skills-Section.scss';
+
+    
+/* styling for contact page */
+
+    @import './contact-page-style';

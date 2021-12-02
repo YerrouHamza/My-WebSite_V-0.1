@@ -1,0 +1,287 @@
+
+
+
+
+/* styleng for Header */
+
+    header{
+        
+        /* remove section and add class active for restart section */
+        display: none;
+        &.active{
+            display: inline-block;
+        }
+
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+        transition: all 0.5s ease;
+        // add Style for scroll class.
+        &.scroll{
+            background-color: $primory-color;
+            .head-nav{
+                // styling for muno button after scroll.
+                .muno-button{
+                    color: $second-color;
+                }
+
+                // styleng for logo after scroll.
+                .logo{
+                    width: 40px;
+        
+                }
+                
+                // styleng for muno list after scroll.
+                .muno li a{
+                    color: rgba(255, 255, 255, 0.9);
+                    opacity: .9;
+                    &:hover{
+                        color: white;
+                        opacity: 1;
+                    }
+                }
+            } 
+        }
+        .head-nav{
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 10px 20px;
+            transition: 1s all ease;
+            // styling for muno button
+            .muno-button{
+                position: absolute;
+                right: 40px;
+                color: $primory-color;
+                opacity: .9;
+                font-size: 1.5rem;
+                font-weight: 500;
+                cursor: pointer;
+                z-index: 10;
+                display: none;
+            }
+            // styling for Header Logo.
+            .logo{
+                width: 40px;
+                margin-left: 15px;
+            }
+            // styling for muno List
+            .muno{
+                display: flex;
+                transition: all .3s ease;
+                li{
+                    padding: 0 15px;
+                }
+                a{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    font-family: $primory-font-family-Poppins;
+                    color: $primory-color;
+                    opacity: .9;
+                    border-bottom: 2px solid transparent;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        color: white;
+                        opacity: 1;
+                        border-bottom: 2px solid white;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+/* Creat Media Query For Header */
+
+
+
+    // media for down 1090px.
+    @media (max-width: 1090px){
+
+        /* styleng for header */
+        header{
+            .head-nav{
+                margin: 0 40px;
+                padding: 15px 15px;
+                .logo{
+                    font-size: 1.85rem;
+                }
+            }
+            .muno{
+                li{
+                    padding: 0 5px 0 5px;
+                    
+                    a{
+                        font-size: 1.05rem;
+
+                    }
+                }
+            }
+        }
+    } 
+
+
+
+    // media for down 900px 
+    @media (max-width: 910px) {
+
+        /* styleng for header */
+        header{
+            .head-nav{
+                margin: 0 15px;
+                padding: 15px 5px;
+                .logo{
+                    font-size: 1.85rem;
+                }
+            }
+            .muno{
+                li{
+                    padding: 0 5px 0 5px;
+                    
+                    a{
+                        font-size: 1.05rem;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    // media for down 745px
+    @media (max-width: 745px) {
+        header{
+            // add Style for scroll class.
+            &.scroll{
+                .head-nav{
+                    .logo span{
+                        color: $second-color;
+            
+                    }
+                    
+                    .muno li a{
+                        color: $primory-color;
+                        opacity: .9;
+                        &:hover{
+                            color: white;
+                            opacity: 1;
+                        }
+                    }
+                } 
+            }
+            .head-nav{
+                .logo{
+                    z-index: 11;
+                }
+                .muno-button{
+                    display: block;
+                    i.active::before{
+                        content: '\f00d';
+                    }
+                }
+
+                // Creat style phone for muno.
+                    .muno{
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: -100%;
+                        background-color: black;
+                        width: 100%;
+                        height: 100vh;
+                        z-index: 10;
+                        padding-top: 30%;
+                        transition:left .5s ease;
+                        &.muno-active{
+                            left: 0;
+                        }
+                        li{
+                            text-align: center;
+                            padding: 20px 5px 20px 5px;
+                            margin-top: 20px;
+                            transition:all .5s ease;
+                            &:hover{
+                                background-color: $primory-color;
+                            }
+                            &:hover a{
+                            color: $second-color;
+                        }
+                        a{
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
+    /* media for down 600px */
+    @media (max-width: 600px) {
+        header{
+            .head-nav{
+                .logo{
+                    font-size: 1.8rem;
+                }
+
+
+                
+            }
+        }
+    }
+
+
+
+
+    /* media for down 540px */
+    @media (max-width: 540px) {
+        header{
+            .head-nav{
+                margin: 0 15px;
+                .logo{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+
+    /* media for down 440px */
+    @media (max-width: 440px) {
+        header{
+            .head-nav{
+                margin: 0 10px;
+                .logo{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+
+    /* media for down 378px */
+    @media (max-width: 378px) {
+        header{
+            .head-nav{
+                margin: 0 5px;
+                .logo{
+                    font-size: 1.4rem;
+                }
+            }
+            // Creat style phone for muno.
+            .muno{
+                li{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }

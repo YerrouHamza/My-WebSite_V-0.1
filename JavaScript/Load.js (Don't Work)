@@ -1,0 +1,86 @@
+
+//--------------------------------------------------------------------------------//
+    /******** Javascript for Befor load  **********/ // + // /******** Javascript for After load  **********/
+
+
+/* Selected Elements */
+
+    /* Get After load */
+    const headAfterLoad = document.querySelector('.after-load'); // Get head After load.
+    
+        /* Get load " typeng animation " */
+    const headLoadTypeng = document.querySelector('.load-page'); // Get Load Haed
+    const headLoadInScroll = document.querySelector('.load-page .load-content'); // Get Load Haed
+    const LoadScrollDown = document.querySelector('.load-page .scroll-down')
+    
+    
+    /* Add Event Listener */
+    headAfterLoad.addEventListener('click', () => {
+        headAfterLoad.classList.add('active'),
+        setTimeout(() => {
+            headLoadTypeng.classList.add('active');
+        }, 1); // 1800
+
+
+        setTimeout(() => {
+            HeaderNav.classList.add('active');
+            aboutSection.classList.add('active');
+            servicesSection.classList.add('active');
+            skillsSection.classList.add('active');
+            LoadScrollDown.classList.add('desbled');
+        }, 10); // 28000
+    });
+
+
+    // on scroll function
+    onscroll = function () {
+    
+        // creat scroll function for header navBar
+        if (this.scrollY > 1){
+            headLoadTypeng.classList.add('in-scroll');
+        } else {
+            return false;
+        };
+    }
+
+
+
+
+//--------------------------------------------------------------------------------//
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+    /******** Javascript for On Loadeng  **********/
+
+/* Loading Page */
+
+
+        /* Creat My Name Text for load Page Text 2 */
+        const tag1MyName = document.querySelector('.load-page .text-2 .my-name #tag-1');
+        const text2MyName_name = document.querySelector('.load-page .text-2 .my-name #name');
+        const tag2MyName = document.querySelector('.load-page .text-2 .my-name #tag-2');
+        
+        tag1MyName.textContent = `<h2>`;
+        text2MyName_name.textContent = `Yerrou Hamza`;
+        tag2MyName.textContent = `</h2>`;
+        
+        
+                /* Creat My Name Text for load Page Text 4 */
+        const buttonTag1 = document.querySelector('#tag-b-1')
+            buttonTag2 = document.querySelector('#tag-b-2'),
+            buttonContent = document.querySelector('.content-b');
+        
+        buttonTag1.textContent = `<button>`;
+        buttonContent.textContent = `About Me`;
+        buttonTag2.textContent = `</button>`;
+        
+        
+        
+//--------------------------------------------------------------------------------//
+
+
+
+
