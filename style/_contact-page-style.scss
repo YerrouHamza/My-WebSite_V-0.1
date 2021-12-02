@@ -1,64 +1,245 @@
 
 
 
-/* styling for contact page header */
-.contact-navbar{
-    
-    /* remove section and add class active for restart section */
-    display: none;
-    &.active{
-        display: inline-block;
+/* styling for contact page content */
+.contact-page-content{
+    width: 100vw;
+    height: 96vh;
+    position: relative;
+    inset: 0;
+
+    /* styling for Haed page content */
+    .head-page{
+        width: 100%;
+        height: 47%;
+        background-color: black;
+
+        .goback-link{
+            width: 15%;
+            padding-top: 20px;
+            padding-left: 20px;
+            a{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center ;
+                color: crimson;
+                padding-bottom: 2px;
+                padding-bottom: 2px;
+                border-bottom: solid 2px crimson;
+                opacity: .6;
+
+                &:hover{
+                    border-bottom: solid 2px rgba(220, 20, 60, 0.6);
+                    opacity: .8;
+                }
+
+                .icon{
+                    padding-right: 20px;
+                    font-size: 1.1rem;       
+                }
+
+                .text {
+                    font-size: 1rem;
+                }
+
+            }
+        }
+
+
+        /* styling for haed content */
+        .head-content{
+            width: 100vw;
+            text-align: center;
+            
+            /* styling for logo */
+            .logo{
+                margin-top: 1rem;
+                
+                img{
+                    width: 50px;
+                }
+            }
+            
+            /*  styling for title */
+            .title-page{
+                color: white;
+                font-size: 2.5rem;
+
+                span{
+                    color: rgba(220, 20, 60, .8);
+                }
+            }
+
+            /* styling for social */
+            .head-social {
+                margin-top: 30px;
+
+                a {
+                    color: white;
+                    font-size: 1.2rem;
+                    padding-top: 20px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+
+                    transition: all .5s ease-in;
+
+                    &:hover{
+                        color: crimson;
+                    }
+                }
+            }
+        }
     }
 
-    width: 100%;
-    background-color: transparent;
-    transition: all 0.5s ease;
-    // add Style for scroll class.
-    .head-nav{
+    
+    /* syling for body page */
+    .body-page{
         width: 100vw;
+        height: 55vh;
+        position: relative;
+        inset: 0;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        padding: 10px 20px;
-        transition: 1s all ease;
-        // styling for muno button
-        .muno-button{
+        justify-content: center;
+        .main-card{
+            min-width: 65%;
+            min-height: 58vh;
+            background-color: white;
+            box-shadow: 0px 0px 22px -6px #474747e3;
+            margin: auto;
+            border: none;
+            border-radius: 5px;
             position: absolute;
-            right: 40px;
-            color: $second-color;
-            opacity: .9;
-            font-size: 1.5rem;
-            font-weight: 500;
-            cursor: pointer;
-            z-index: 10;
-            display: none;
-        }
-        // styling for Header Logo.
-        .logo{
-            width: 40px;
-            margin-left: 15px;
-        }
-        // styling for muno List
-        .muno{
-            display: flex;
-            transition: all .3s ease;
-            li{
-                padding: 0 15px;
-            }
-            a{
-                font-size: 1.2rem;
-                font-weight: 600;
-                font-family: $primory-font-family-Poppins;
-                color: $primory-color;
-                opacity: .8;
-                border-bottom: 2px solid transparent;
-                transition: all .5s ease-in-out;
-                &:hover{
-                    color: $primory-color;
-                    opacity: 1;
-                    border-bottom: 2px solid $primory-color;
-                    
+            top: -73px;
+            left: auto;
+            z-index: 5;
+
+            .card-content{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .right-card{
+                    width: 35%;
+                    height: 60vh;
+                    background-image: url(../Photos/contact-page-picture-2.jpg);
+                    background-size: cover;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+
+                /* styling for left card content */
+                .left-card{
+                    width: 80%;
+                    height: 100%;
+                    padding: 25px 20px;
+
+
+                    /* styling for form */
+                    .contact-forms{
+
+                        // styling for all input
+                        .input {
+                            width: 47%;
+                            height: 2.5rem;
+                            background-color: hsla(348, 83%, 47%, 0.04);
+                            border: none;
+                            border-radius: 3px;
+                            border-bottom-right-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                            
+                            border-bottom: solid 1px rgba(100, 100, 100, 0.6);
+                            
+                            outline: none;
+
+                            transition: all .5s ease-in;
+                            &:focus{
+                                border-bottom: solid 1px rgba(220, 20, 60, .6);
+                            }
+                        }
+
+                        .first-name,
+                        .last-name,
+                        .email,
+                        .number{
+                            margin-bottom: 20px;
+                            margin-right: 10px;
+                            padding-left: 10px;
+                        }
+
+
+
+                        // styling for choose service
+                        .services {
+                            width: 100%;
+                            margin-bottom: 14px;
+
+                            .choose-services-title {
+                                font-size: 1.2rem;
+                                color: rgba(0, 0, 0, 0.7);
+                                padding: 10px 0px;
+                                padding-bottom: 10px;
+                            }
+
+                            .choose-services {
+                                width: 75%;
+                                display: flex;
+                                justify-content: space-around;
+
+                                label {
+                                    font-size: 1rem;
+                                    color: #000000d1;
+                                    padding-right: 10px;
+                                }
+                            }
+
+                        }
+
+
+                        // styling for message.
+                        textarea{
+                            background-color: hsla(348, 83%, 47%, 0.04);
+                            border: none;
+                            border-radius: 3px;
+                            border-bottom-right-radius: 5px;
+                            border-bottom-left-radius: 5px;
+
+                            border-bottom: solid 1px rgba(100, 100, 100, 0.6);
+
+                            outline: none;
+
+                            transition: all .5s ease-in;
+                            &:focus{
+                                border-bottom: solid 1px rgba(220, 20, 60, .6);
+                            }
+                        }
+
+                        .message {
+                            width: 96% !important;
+                            max-height: 4rem !important;
+                            min-height: 4rem !important;
+                            margin: 20px 0;
+                            padding: 5px;
+                        }
+
+                        // styling for submit button
+                        .button{
+                            color: white;
+                            font-size: 1rem;
+                            background-color: rgba(220, 20, 60, 0.7);
+                            margin-top: 10px;
+                            border: solid 1px rgba(220, 20, 60, 0.7);
+                            border-radius: 5px;
+                            padding: 12px 25px;
+
+                            cursor: pointer;
+                            transition: all .4s ease-in;
+                            &:hover{
+                                color: rgba(220, 20, 60, 0.7);
+                                background-color: white;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -71,18 +252,11 @@
 
 
 
-
 /* styling for contact page Footer Section */
 .contact-footer{
     font-size: 1.1rem;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    position: absolute;
-    top: 91%;
-    left: 0%;
-    z-index: 2;
+    height: 5px;
 
     transition: all 1s ease-in-out;
 
@@ -99,51 +273,5 @@
             }
         }
 
-    }
-
-
-    /* styleng for social icons */
-    .aside-social{
-        padding-top: 10px;
-        a{
-            margin-top: 15px;
-            color: $primory-color;
-            font-size: 1.1rem;
-            text-align: center;
-
-
-            .icon-1{
-                padding: 8.5px 10px;
-                margin-right: 5px;
-                border-radius: 30%;
-                &:hover{
-                    color: white;
-                    background-image: linear-gradient(40deg, #0765f3, #ff9100);                    
-                }
-            }
-
-            .icon-2{
-                padding: 9px 9px;
-                margin-right: 5px;
-                width: 38px;
-                border-radius: 30%;
-                &:hover{
-                    color: white;
-                    background-image: linear-gradient(200deg,#ff9100, #b41b28);
-                    
-                }
-            }
-
-            .icon-3{
-                padding: 8.5px 8.5px;
-                width: 38px;
-                border-radius: 30%;
-                &:hover{
-                    color: white;
-                    background-image: linear-gradient(40deg, #2283af, #ff9100);
-                    
-                }
-            }
-        }
     }
 }

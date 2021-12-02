@@ -180,14 +180,15 @@
             width: 529px;
             position: absolute;
             bottom: -25px;
-            left: -26px;
+            right: 25px;
             opacity: 1;
             z-index: 2;
         }
 
         .secound-picture {
             opacity: .2;
-            width: 482px;
+            width: 518px;
+            margin-right: 20px;
         }
     }
     
@@ -210,7 +211,7 @@
         transition: all 1s ease-in-out;
 
         .copyreat-home{
-            width: 85%;
+            width: 80%;
             margin-left: 15px;
             opacity: .8;
             h4{
@@ -281,7 +282,7 @@
                     border-radius: 30%;
                     &:hover{
                         color: white;
-                        background-image: linear-gradient(40deg, #0765f3, #ff9100);                    
+                        background-image: linear-gradient(40deg, #5c5c5c, crimson);                   
                     }
                 }
 
@@ -292,7 +293,7 @@
                     border-radius: 30%;
                     &:hover{
                         color: white;
-                        background-image: linear-gradient(200deg,#ff9100, #b41b28);
+                        background-image: linear-gradient(40deg, #5c5c5c, crimson);
                         
                     }
                 }
@@ -303,8 +304,7 @@
                     border-radius: 30%;
                     &:hover{
                         color: white;
-                        background-image: linear-gradient(40deg, #2283af, #ff9100);
-                        
+                        background-image: linear-gradient(40deg, #5c5c5c, crimson);                        
                     }
                 }
                 
@@ -314,7 +314,7 @@
                     border-radius: 30%;
                     &:hover{
                         color: white;
-                        background-image: linear-gradient(40deg, #5c5c5c, #ff9100);
+                        background-image: linear-gradient(40deg, #5c5c5c, crimson);
                         
                     }
                 }

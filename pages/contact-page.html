@@ -17,7 +17,7 @@
 </head>
 <body class="contact-page">
 
-    <!-- Creat Page After Leodeng -->
+    <!-- Create Page After Leodeng -->
     <div class="after-load">
         <div class="backg-1"></div>
         <div class="logo">
@@ -36,28 +36,7 @@
     </div>
 
 
-
-    <!-- Creat Header -->
-    <header class="contact-navbar" id="navbar-contact">
-        <nav class="head-nav">
-            <a href="/index.html">
-                <img src="/Photos/Logo-3.png" alt="Yerrou Hamza Logo" class="logo">
-            </a>
-            <ul class="muno">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#" class="about-me">About-Me</a></li>
-                <li><a href="/index.html#Services">Services</a></li>
-                <li><a href="/index.html#Skills">Skills</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="muno-button">
-                <i class="fas fa-align-justify"></i>
-            </div>
-        </nav>
-    </header>
-
-
-    <!-- creat about section -->
+    <!-- create about section -->
     <main class="main-about">
         <!-- Creat Main cart -->
         <div class='card-content'>
@@ -102,7 +81,101 @@
     </main>
 
 
-    <main class="contact-card">
+    <!-- Craete page content -->
+    <main class="contact-page-content">
+        
+        <!-- Craete Head page -->
+        <section class="head-page">
+                
+            <!-- Creat Links to go back -->
+            <div class="goback-link">
+                <a href="../index.html#home">
+                    <i class="fas fa-long-arrow-alt-left icon"></i>
+                    <p class="text">go back to home paga</p>
+                </a>
+            </div>
+            
+            <!-- Creat Haed page content -->
+            <div class="head-content">
+
+                <!-- head Logo -->
+                <div class="logo">
+                    <img src="/Photos/Logo-1.png" alt="">
+                </div>
+                
+                <!-- Title for page -->
+                <h2 class="title-page">Hamza <span>Yerrou</span></h2>
+
+                <!-- social links -->
+                <div class="head-social">
+                    <a href="https://www.facebook.com/hamza.yerro">
+                        <i class="fab fa-facebook-f icon-1"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yerrou_hamza/">
+                        <i class="fab fa-instagram icon-2"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hamza-yerrou-769a2b214/">
+                        <i class="fab fa-linkedin-in icon-3"></i>
+                    </a>
+                    <a href="https://github.com/YerrouHamza">
+                        <i class="fab fa-github icon-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+         <!-- Craete body page -->
+         <section class="body-page">
+            <!-- Craete contact card -->
+             <div class="main-card">
+                 <div class="card-content">
+                    <!-- Craete left card (contact form) -->
+                    <div class="left-card">
+                        <from class="contact-forms">
+                            <!-- first name input -->
+                            <input class='first-name input' type="text" name='first-name' placeholder="First Name" required>
+                            
+                            <!-- last name input -->
+                            <input class='last-name input' type="text" name='last-name' placeholder="Last Name" required>
+                            
+                            <!-- phone number input-->
+                            <input class='number input' type="text" name='number' placeholder='Number'>
+                            
+                            <!-- email input-->
+                            <input class='email input' type="email" name='email' placeholder='Email' required>
+
+                            <div class="services">
+                                <h3 class='choose-services-title'>choose Services</h3>
+                                <div class="choose-services">
+                                    <div class="development-service">
+                                        <input type="checkbox" name="development-service"> 
+                                        <label for="development-service">Development</label>
+                                    </div>
+                                    <div class="design-service">
+                                        <input type="checkbox" name="design-service"> 
+                                        <label for="design-service">Design</label>
+                                    </div>
+                                    <div class="ecommers-service">
+                                        <input type="checkbox" name="ecommers-service"> 
+                                        <label for="ecommers-service">E-Commers</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- message -->
+                            <textarea class="message" name="message" id="" cols="30" rows="5" placeholder='Message ...' aria-expanded="false"></textarea>
+
+                            <!-- submit Button -->
+                            <button class='button' type='submit'>Send</button>
+                        </from>
+                    </div>
+
+                    <!-- Craete right card (Picture) -->
+                    <div class="right-card">    
+                    </div>
+                 </div>
+             </div>
+         </section>
 
     </main>
 
@@ -111,19 +184,6 @@
         <div class="copyreat-home">
             <h4 class="copyreat">Copyright &copy; 2021 by  <span>Yerrou Hamza</span></h4>
         </div>
-
-        <!-- Creat social midea-->
-        <aside class="aside-social">
-            <a href="#">
-                <i class="fab fa-facebook-f icon-1"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-instagram icon-2"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-linkedin-in icon-3"></i>
-            </a>
-        </aside>
     </footer>
 
 
