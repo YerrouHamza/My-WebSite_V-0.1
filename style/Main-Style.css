@@ -595,7 +595,7 @@
 .load-page .home-footer .scroll-down .icon .col-right {
   position: absolute;
   top: -10px;
-  left: 10px;
+  left: 0px;
   padding: 5px 15px;
 }
 
@@ -647,6 +647,17 @@
 .load-page .home-footer .aside-social a .icon-3:hover {
   color: white;
   background-image: linear-gradient(40deg, #2283af, #ff9100);
+}
+
+.load-page .home-footer .aside-social a .icon-4 {
+  padding: 8.5px 8.5px;
+  width: 38px;
+  border-radius: 30%;
+}
+
+.load-page .home-footer .aside-social a .icon-4:hover {
+  color: white;
+  background-image: linear-gradient(40deg, #5c5c5c, #ff9100);
 }
 
 .load-page.active {
@@ -2495,7 +2506,6 @@ body {
   }
 }
 
-/* styleng for Footer */
 /* styling for contact page */
 /* styling for contact page header */
 .contact-navbar {
@@ -2655,4 +2665,4 @@ body {
   color: white;
   background-image: linear-gradient(40deg, #2283af, #ff9100);
 }
-/*# sourceMappingURL=HeadStyle.css.map */
+/*# sourceMappingURL=Main-Style.css.map */
