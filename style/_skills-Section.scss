@@ -5,6 +5,7 @@
     background-color: white;
     font-family: $primory-font-family-Poppins; //give font family for all test.
 
+    transition: all 1s ease-in;
     /* remove section and add class active for restart section */
     display: none;
     &.active{
@@ -87,7 +88,7 @@
                         fill: none;
                         stroke: url(#Color);
                         stroke-dasharray: 312;
-                        stroke-dashoffset: 312;
+                        // -stroke dashoffset-
                         stroke-width: 10px; // border size
                     }
     
@@ -120,8 +121,6 @@
                         color: rgba(0, 0, 0, 0.8);
                     }
                 }
-    
-
             }
 
     
@@ -129,8 +128,12 @@
             /* styling for HTML */
             .html-bar{
     
-                // styling for cunter.
-                
+                // styling for svg.
+                .svg{
+                    circle{
+                        stroke-dashoffset: 78;
+                    }
+                }
     
                 // styling for bar content.
                 .bar-content{
@@ -151,8 +154,12 @@
             /* styling for CSS */
             .css-bar{
     
-                // styling for cunter.
-                
+                // styling for svg.
+                .svg{
+                    circle{
+                        stroke-dashoffset: 93.6;
+                    }
+                }
     
                 // styling for bar content.
                 .bar-content{
@@ -173,8 +180,12 @@
             /* styling for JavaScipt */
             .js-bar{
     
-                // styling for cunter.
-    
+                // styling for svg.
+                .svg{
+                    circle{
+                        stroke-dashoffset: 109.2;
+                    }
+                }
     
                 // styling for bar content.
                 .bar-content{
@@ -195,8 +206,12 @@
             /* styling for React */
             .react-bar{
     
-                // styling for cunter.
-    
+                // styling for svg.
+                .svg{
+                    circle{
+                        stroke-dashoffset: 156;
+                    }
+                }
     
                 // styling for bar content.
                 .bar-content{
@@ -218,8 +233,12 @@
             /* styling for BootsTrap */
             .bootstrap-bar{
     
-                // styling for cunter.
-                
+                // styling for svg.
+                .svg{
+                    circle{
+                        stroke-dashoffset: 62.4;
+                    }
+                }
     
                 // styling for bar content.
                 .bar-content{
@@ -232,16 +251,18 @@
                 .lung-nam {
                     left: 13%;
                 }
-    
-                // styling for svg
             }
     
     
             /* styling for WordPress */
             .wordpress-bar{
     
-                // styling for cunter.
-                
+                // styling for svg.
+                .svg{
+                    circle{
+                        stroke-dashoffset: 46.8;
+                    }
+                }
     
                 // styling for bar content.
                 .bar-content{
@@ -254,8 +275,6 @@
                 .lung-nam {
                     left: 15%;
                 }
-    
-                // styling for svg
             }
         }
     }
@@ -324,6 +343,13 @@
             .language-name{
                 margin-right: 1.7rem;
             }
+
+            // styling for bar countenr
+            .bar-counter{
+                &::before{
+                    width: 90%;
+                }
+            }
         }
 
     /****************************/
@@ -333,6 +359,13 @@
             // styling for language names.
             .language-name{
                 margin-right: 15px;
+            }
+
+            // styling for bar countenr
+            .bar-counter{
+                &::before{
+                    width: 55%;
+                }
             }
         }
 
@@ -344,16 +377,115 @@
             .language-name{
                 margin-right: 1.7rem;
             }
+
+            // styling for bar countenr
+            .bar-counter{
+                &::before{
+                    width: 40%;
+                }
+            }
         }
     }
 
 
 
 /************** ANIMATION **************/
+    
+
+    &.animtion-page{
+        // styling for my skill language.
+        .skills-content{
+
+                //---------------------- programing language Call Animation
+            // animation for skills programing language.
+            .programing-language{
+
+                /* styling for HTML */
+                .html-bar{
+                    // styling for cunter.
+                    .svg{
+                        circle{
+                            stroke-dashoffset: 312;
+                        }
+                    }   
+                }
+
+                /* styling for CSS */
+                .css-bar{
+                    // styling for cunter.
+                    .svg{
+                        circle{
+                            stroke-dashoffset: 312;
+                        }
+                    }
+                }
+
+                /* styling for JavaScipt */
+                .js-bar{
+                    // styling for cunter.
+                    .svg{
+                        circle{
+                            stroke-dashoffset: 312;
+                        }
+                    }
+                }
+
+                /* styling for React */
+                .react-bar{
+                    // styling for cunter.
+                    .svg{
+                        circle{
+                            stroke-dashoffset: 312;
+                        }
+                    }
+                }
+        
+
+                /* styling for BootsTrap */
+                .bootstrap-bar{
+                    // styling for cunter.
+                    .svg{
+                        circle{
+                            stroke-dashoffset: 312;
+                        }
+                    }
+                }
+        
+        
+                /* styling for WordPress */
+                .wordpress-bar{
+                    // styling for cunter.
+                    .svg{
+                        circle{
+                            stroke-dashoffset: 312;
+                        }
+                    }
+                }
+
+                    //----------------speaking language Call Animation.
+                // styling for speaking language skills
+                .speaking-language{
+                    .main-language{
+                        // styling for bar countenr
+                        .bar-counter{
+                            &::before{
+                                width: 0%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // start animtion.
     &.start-work{
         // styling for my skill language.
         .skills-content{
-    /******************* programing language Call Animation ***********************/
+
+                //--------------------programing language Call Animation.
             // animation for skills programing language.
             .programing-language{
 
@@ -418,7 +550,7 @@
                 }
             }
 
-    /******************* speaking language Call Animation ***********************/
+                //------------------speaking language Call Animation.
             // styling for speaking language skills
             .speaking-language{
                

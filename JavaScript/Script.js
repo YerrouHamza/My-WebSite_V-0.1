@@ -1,11 +1,27 @@
 
-/* Selected Elements */
+/* Cookies */
 
+
+    // get cookies .
+    const cookies = document.cookie
+                .split(';')
+                .map(Cookie => Cookie.split('='))
+                .reduce((accumulator, [key, value]) => ({ 
+                    ...accumulator, [key.trim()]: decodeURIComponent(value)
+                }), {});
+
+
+    console.log(cookies.value);
+
+    // get Clear Cookies From sitweb.
+    const clearCookies = document.querySelector('#clear-cookies');
+    const oldDate = '01 Jan 1970 00:00:00 UTC';
+
+/* Selected Elements */
 
         /* // Get Header NavBar. // */
             //--- Get Header NavBar.
     const HeaderNav = document.querySelector('#navbar'); // home Header
-    const HeaderNavContact = document.querySelector('#navbar-contact'); // Contact page Header
             //--- Get head nav.
     const navHead = document.querySelector('#navbar .head-nav');
             //--- Get Header Logo.
@@ -22,6 +38,7 @@
 
         /* // Get After load // */
     const headAfterLoad = document.querySelector('.after-load'); // Get head After load.
+    const headAfterLoadIcon = document.querySelector('.after-load .icon-click'); // Get head After load.
 
 
     /* // Get load " typeng animation " // */
@@ -43,63 +60,25 @@
 
         /* // Get skills Section. // */
     const skillsSection = document.querySelector('.section-skills'); // Get skills Section.
-
-
-//--------------------------------------------------------------------------------//
-    /******** Javascript for Befor load  **********/ // + // /******** Javascript for After load  **********/
-
-
-
-
-    /* Add Event Listener */
-
-        /*-- creat " after load click and on load page "" realted */
-        headAfterLoad.addEventListener('click', () => {
-            headAfterLoad.classList.add('active'),
-            // set time out for active home page
-            setTimeout(() => {
-                headLoadTypeng.classList.add('active');
-            }, 1800); // 1800
-
-            // set time out for active contact page header.
-            setTimeout(() => {
-                HeaderNavContact.classList.add('active');
-            }, 2200); // 1800
-
-            // set time out for desbled after load page
-            setTimeout(() => {
-                headAfterLoad.classList.add('desbled');
-            }, 3000); // 3000
-
-            // Creat set time out for active all page acfter on load page finsh
-            setTimeout(() => {
-                HeaderNav.classList.add('active');
-                servicesSection.classList.add('active');
-                skillsSection.classList.add('active');
-                LoadScrollDown.classList.add('desbled');
-            }, 20000);  // 20000
-        });
-
-
-        // creat function For call and close about section
-        function aboutCall() {
-            navAboutMe.addEventListener('click', () => { // if click in Nav About me.
-                aboutSection.classList.toggle('active');
-            });
-            homeCallAboutB.addEventListener("click", () => {
-                aboutSection.classList.add('active');
-            });
-            closeAboutIcon.addEventListener('click', () => { // if click close icon About me.
-                aboutSection.classList.remove('active');
-            });
-        }
-        aboutCall();
-    /* add SetTimeOut */
-
-
-//--------------------------------------------------------------------------------//
-
-
+            // Get Html 
+            let htmlNumber = document.querySelector('#html-counter');
+            // Get css 
+            let cssNumber = document.querySelector('#css-counter');
+            // Get js 
+            let jsNumber = document.querySelector('#js-counter');
+            // Get react 
+            let reactNumber = document.querySelector('#react-counter');
+            // Get bootstrap 
+            let bootstrapNumber = document.querySelector('#bootstrap-counter');
+            // Get wordpress 
+            let wordpressNumber = document.querySelector('#wordpress-counter');
+                //------------------- spealink language.
+            // Get arabic speaking 
+            let arabicSPKNumber = document.querySelector('#arabic-counter');
+            // Get english speaking 
+            let englishSPKNumber = document.querySelector('#english-counter');
+            // Get france speaking 
+            let franceSPKNumber = document.querySelector('#france-counter');
 
 
 //--------------------------------------------------------------------------------//
@@ -126,113 +105,184 @@
         buttonTag1.textContent = `<button>`;
         buttonContent.textContent = `About Me`;
         buttonTag2.textContent = `</button>`;
-        
-        
-        
-//--------------------------------------------------------------------------------//
-
-
-
-
 
 
 
 //--------------------------------------------------------------------------------//
-    /******** Javascript for Scrolleng Functions  **********/
+
+    /* Add Event Listener & use white cookies */
+    if (cookies.value == 'true') {
+
+        // despled click icon and active page
+        headAfterLoad.classList.add('active');
+        headAfterLoadIcon.classList.add('desbled');
+        
+        // set time out for desbled after load page
+        setTimeout(() => {
+           headAfterLoad.classList.add('desbled');
+       }, 3000); // 3000
 
 
-        /* Add Event Listener */
-        munoButton.addEventListener('click', () => {
-            munoLinks.classList.toggle('muno-active');
-            munoButtonI.classList.toggle('active');
+       // clear Cookies
+       clearCookies.classList.add('active');
+      
+       // set time out for active home page.
+        headLoadTypeng.classList.remove('animtion-page'); // add class animtion-page for create animtion.
+        headLoadTypeng.classList.remove('active-animtion'); // remove active animation.
+        headLoadTypeng.classList.add('active-page'); // remove active animation.
+
+        /* services page */
+        HeaderNav.classList.add('active');
+        
+        
+       // set time out for active all
+        setTimeout(() => {
+            /* services page */
+            servicesSection.classList.remove('animtion-page'); // remove active animation.
+            servicesSection.classList.add('active');
+    
+            /* skills page */
+            skillsSection.classList.remove('animtion-page'); // remove active animation.
+            skillsSection.classList.add('active');
+            skillsPageActive();
+        }, 3000); // 3000
+ 
+    } else {
+
+        /* after load */
+        headLoadTypeng.classList.add('animtion-page'); // add class animtion-page for create animtion.
+
+        /* skills page */
+        skillsSection.classList.add('animtion-page'); // add class animtion-page for create animtion
+
+        /* servicess page */
+        servicesSection.classList.add('animtion-page'); // add class animtion-page for create animtion
+
+
+        /*-- creat " after load click and on load page " realted */
+        headAfterLoad.addEventListener('click', () => {
+            headAfterLoad.classList.add('active');
+
+            // set time out for active home page.
+            setTimeout(() => {
+                headLoadTypeng.classList.add('active-animtion'); // add class animtion-page for active animtion.
+            }, 1800); // 1800
+    
+            // set time out for desbled after load page
+            setTimeout(() => {
+                headAfterLoad.classList.add('desbled');
+            }, 3000); // 3000
+    
+            // Creat set time out for active all page acfter on load page finsh
+            setTimeout(() => {
+                HeaderNav.classList.add('active');
+                servicesSection.classList.add('active');
+                skillsSection.classList.add('active');
+
+                // clear Cookies
+                clearCookies.classList.add('active');
+            }, 20000);  // 20000 "that time who typing animtion need to finshed".
+    
+            // get cookies value after active page
+            setTimeout(() => {
+                document.cookie = "value=true; path='/'";
+            }, 20000);  // 20000.
         });
 
+        /* skills page */
+        SkillPage();
+    }
 
 
+//--------------------------------------------------------------------------------//
 
+    // creat function For call and close about section
+    function aboutCall() {
+        navAboutMe.addEventListener('click', () => { // if click in Nav About me.
+            aboutSection.classList.toggle('active');
+        });
+        homeCallAboutB.addEventListener("click", () => {
+            aboutSection.classList.add('active');
+        });
+        closeAboutIcon.addEventListener('click', () => { // if click close icon About me.
+            aboutSection.classList.remove('active');
+        });
+    }
+    aboutCall();
+
+
+//--------------------------------------------------------------------------------//
 
     /* Creat Functions */
-
         //- on scroll function
-window.addEventListener('scroll', function () {
-        /* 
-    // creat scroll reomv scroll down popup.
-    if (this.scrollY > 0){
-        headLoadTypeng.classList.add('in-scroll');
-    } else {
-        return false;
-    };
-        */
+    window.addEventListener('scroll', function () {
+
+        // creat scroll function for header navBar
+        if (this.scrollY > 10){
+            //- if scroll Window navBar add Class Scroll.
+            HeaderNav.classList.add('scroll');
+            logo.setAttribute('src', '/Photos/Logo-2.png');
+        } else {
+            //- else this navBar Remove Class Scroll.
+            HeaderNav.classList.remove('scroll');
+            logo.setAttribute('src', '/Photos/Logo-1.png');
+        };
 
 
-    // creat scroll function for header navBar
-    if (this.scrollY > 10){
-        //- if scroll Window navBar add Class Scroll.
-        HeaderNav.classList.add('scroll');
-        logo.setAttribute('src', '/Photos/Logo-2.png');
-    } else {
-        //- else this navBar Remove Class Scroll.
-        HeaderNav.classList.remove('scroll');
-        logo.setAttribute('src', '/Photos/Logo-1.png');
-    };
+        // creat scroll animetion for Services section.
+        //- in scroll > 250
+        if (this.scrollY > 450){
+            console.log('work')
+            servicesSection.classList.add('scroll');
+        } else {
+            null
+        };
 
-
-// creat scroll animetion for Services section.
-    //- in scroll > 250
-    if (this.scrollY > 450){
-        console.log('work')
-        servicesSection.classList.add('scroll');
-    } else {
-        null
-    };
-
-});
+    });
 
 
 
         
 
-//--------------------------------------------------------------------------------//
+//-------------------------- Clear Cookies Function ------------------------------------------------------//
+
+clearCookies.addEventListener('click', () => {
+    document.cookie = "value=true; 01 Jan 1970 00:00:00 UTC; path='/'";
+    console.log(cookies.value);
+})
 
 
 
-//--------------------------------------------------------------------------------//
+//------------------------get and creat counter number for skills section-------------------------//
+    /* if cookies is true */
+
+function SkillPage() {
     /* get and creat counter number for skills section */
-            //------------------- Get programing language.
-        // Get Html Counter
-    let htmlNumber = document.querySelector('#html-counter');
-    let htmlCounter = 0;
-        // Get css Counter
-    let cssNumber = document.querySelector('#css-counter');
-    let cssCounter = 0;
-        // Get js Counter
-    let jsNumber = document.querySelector('#js-counter');
-    let jsCounter = 0;
-        // Get react Counter
-    let reactNumber = document.querySelector('#react-counter');
-    let reactCounter = 0;
-        // Get bootstrap Counter
-    let bootstrapNumber = document.querySelector('#bootstrap-counter');
-    let bootstrapCounter = 0;
-        // Get wordpress Counter
-    let wordpressNumber = document.querySelector('#wordpress-counter');
-    let wordpressCounter = 0;
-
-            //------------------- spealink language.
-        // Get arabic speaking Counter
-    let arabicSPKNumber = document.querySelector('#arabic-counter');
-    let arabicSPKCounter = 0;
-        // Get english speaking Counter
-    let englishSPKNumber = document.querySelector('#english-counter');
-    let englishSPKCounter = 0;
-        // Get france speaking Counter
-    let franceSPKNumber = document.querySelector('#france-counter');
-    let franceSPKCounter = 0;
-
-    let interval = null; // creat clear Setintrval.
-        
-        
-    // creat counter function
+                //------------------- Get programing language.
+            // Get Html Counter
+            let htmlCounter = 0;
+                // Get css Counter
+            let cssCounter = 0;
+                // Get js Counter
+            let jsCounter = 0;
+                // Get react Counter
+            let reactCounter = 0;
+                // Get bootstrap Counter
+            let bootstrapCounter = 0;
+                // Get wordpress Counter
+            let wordpressCounter = 0;
+    
+                    //------------------- spealink language.
+                // Get arabic speaking Counter
+            let arabicSPKCounter = 0;
+                // Get english speaking Counter
+            let englishSPKCounter = 0;
+                // Get france speaking Counter
+            let franceSPKCounter = 0;
+    
+            let interval = null; // creat clear Setintrval.
+    
+    // creat counter function for nskill page.
     function counterFunction() {
     //- using setInterval to creat counter number
         //--------------- Prohramming language.
@@ -245,7 +295,7 @@ window.addEventListener('scroll', function () {
                 htmlCounter += 1;
                 htmlNumber.innerHTML = htmlCounter + "%";
             }    
-
+    
             // counter for css.
             if (cssCounter == 70){
                 window.clearInterval(interval);
@@ -253,7 +303,7 @@ window.addEventListener('scroll', function () {
                 cssCounter += 1;
                 cssNumber.innerHTML = cssCounter + "%";
             }
-
+    
             // counter for js.
             if (jsCounter == 65){
                 window.clearInterval(interval);
@@ -261,7 +311,7 @@ window.addEventListener('scroll', function () {
                 jsCounter += 1;
                 jsNumber.innerHTML = jsCounter + "%";
             }
-
+    
             // counter for react.
             if (reactCounter == 50){
                 window.clearInterval(interval);
@@ -269,7 +319,7 @@ window.addEventListener('scroll', function () {
                 reactCounter += 1;
                 reactNumber.innerHTML = reactCounter + "%";
             }
-
+    
             // counter for bootstrap.
             if (bootstrapCounter == 80){
                 window.clearInterval(interval);
@@ -277,7 +327,7 @@ window.addEventListener('scroll', function () {
                 bootstrapCounter += 1;
                 bootstrapNumber.innerHTML = bootstrapCounter + "%";
             }
-
+    
             // counter for wordpress.
             if (wordpressCounter == 85){
                 window.clearInterval(interval);
@@ -286,7 +336,7 @@ window.addEventListener('scroll', function () {
                 wordpressNumber.innerHTML = wordpressCounter + "%";
             }
         }, 115);
-
+    
     //--------------- For spealink language.
         setInterval(() => { // for arabic.
             // counter for Arabic.
@@ -297,7 +347,7 @@ window.addEventListener('scroll', function () {
                 arabicSPKNumber.innerHTML = arabicSPKCounter + "%";
             }
         }, 120);
-
+    
         setInterval(() => { // for english.
             // counter for English.
             if (englishSPKCounter == 55){
@@ -307,7 +357,7 @@ window.addEventListener('scroll', function () {
                 englishSPKNumber.innerHTML = englishSPKCounter + "%";
             }
         }, 125);
-
+    
         setInterval(() => { // for france.
             // counter for France.
             if (franceSPKCounter == 40){
@@ -333,8 +383,35 @@ window.addEventListener('scroll', function () {
                 //- active Css animtion bar.
                 skillsSection.classList.add('start-work');
             }, 1000);
-
+    
         } else {
             false
         }
     });
+}
+
+
+    /* if cookies is false */
+function skillsPageActive(){
+
+    // counter for Html.
+        htmlNumber.innerHTML = 75 + "%";
+    // counter for css.
+        cssNumber.innerHTML = 70 + "%";
+    // counter for js.
+        jsNumber.innerHTML = 65 + "%";
+    // counter for react.
+        reactNumber.innerHTML = 50 + "%";
+    // counter for bootstrap.
+        bootstrapNumber.innerHTML = 80 + "%";
+    // counter for wordpress.
+        wordpressNumber.innerHTML = 85 + "%";
+
+//--------------- For spealink language.
+    // counter for Arabic.
+        arabicSPKNumber.innerHTML = 90 + "%";
+    // counter for English.
+        englishSPKNumber.innerHTML = 55 + "%";
+    // counter for France.
+        franceSPKNumber.innerHTML = 40 + "%";
+}

@@ -5,6 +5,7 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: 'Source Code Pro', monospace;
 }
 
 /*  styleng for home page */
@@ -32,7 +33,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999;
+  z-index: 999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,6 +70,10 @@
   top: 40%;
   left: 80%;
   z-index: 200;
+}
+
+.after-load .icon-click.desbled {
+  display: none;
 }
 
 .after-load .icon-click .main-icon .icon {
@@ -357,6 +362,8 @@
   overflow: hidden;
   /* styling for background image */
   /* styleng for footer */
+  /* if cookies === true */
+  /* if cookies === false */
   /** creat active class if click for after load page **/
 }
 
@@ -378,26 +385,6 @@
   overflow: hidden;
 }
 
-.load-page .load-content .text-1::before, .load-page .load-content .text-1::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.load-page .load-content .text-1::before {
-  overflow: hidden;
-  background: #1a1515;
-  width: 100%;
-}
-
-.load-page .load-content .text-1::after {
-  overflow: hidden;
-  width: .3rem;
-  background-color: #c8dc14;
-}
-
 .load-page .load-content .text-2 {
   font-size: 3.5rem;
   position: relative;
@@ -406,27 +393,6 @@
   width: max-content;
   margin-left: 23%;
   margin-top: 3%;
-  visibility: hidden;
-}
-
-.load-page .load-content .text-2::before, .load-page .load-content .text-2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.load-page .load-content .text-2::before {
-  overflow: hidden;
-  background: #1a1515;
-  width: 100%;
-}
-
-.load-page .load-content .text-2::after {
-  overflow: hidden;
-  width: .3rem;
-  background-color: #c8dc14;
 }
 
 .load-page .load-content .text-3 {
@@ -437,27 +403,6 @@
   width: max-content;
   margin-left: 12%;
   margin-top: 5%;
-  visibility: hidden;
-}
-
-.load-page .load-content .text-3::before, .load-page .load-content .text-3::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.load-page .load-content .text-3::before {
-  overflow: hidden;
-  background-color: #1a1515;
-  width: 100%;
-}
-
-.load-page .load-content .text-3::after {
-  overflow: hidden;
-  width: .3rem;
-  background-color: #c8dc14;
 }
 
 .load-page .load-content .text-4 {
@@ -469,7 +414,6 @@
   margin-left: 35%;
   margin-top: 5%;
   padding: 3px 7px;
-  visibility: hidden;
 }
 
 .load-page .load-content .text-4 .button a {
@@ -477,29 +421,7 @@
   cursor: pointer !important;
 }
 
-.load-page .load-content .text-4::before, .load-page .load-content .text-4::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.load-page .load-content .text-4::before {
-  overflow: hidden;
-  background-color: #1a1515;
-  width: 100%;
-}
-
-.load-page .load-content .text-4::after {
-  overflow: hidden;
-  width: .3rem;
-  background-color: #c8dc14;
-}
-
 .load-page .home-picture {
-  visibility: hidden;
-  opacity: 0;
   position: absolute;
   bottom: 15px;
   right: 60px;
@@ -522,8 +444,6 @@
 }
 
 .load-page .home-footer {
-  visibility: hidden;
-  opacity: 0;
   font-size: 1.1rem;
   width: 100%;
   display: -webkit-box;
@@ -661,90 +581,268 @@
   background-image: linear-gradient(40deg, #5c5c5c, crimson);
 }
 
-.load-page.active {
+.load-page.active-page {
+  /* styleng for footer */
+}
+
+.load-page.active-page .load-content .text-1 {
+  font-size: 1.3rem;
+  margin-left: 12%;
+  margin-top: 16%;
+}
+
+.load-page.active-page .load-content .text-2 {
+  font-size: 2.8rem;
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+.load-page.active-page .load-content .text-3 {
+  font-size: 1.5em;
+  margin-left: 12%;
+  margin-top: 1.6%;
+}
+
+.load-page.active-page .load-content .text-4 {
+  font-size: 1.5rem;
+  margin-left: 13%;
+  margin-top: 4%;
+}
+
+.load-page.active-page .home-footer {
+  /* creat styleng for scroll down*/
+}
+
+.load-page.active-page .home-footer .scroll-down .col-right .s-icon-2 {
+  -webkit-animation: icon-down 1s infinite;
+          animation: icon-down 1s infinite;
+}
+
+.load-page.animtion-page {
   /* styling for background image */
   /* styleng for footer */
 }
 
-.load-page.active .load-content .text-1 {
+.load-page.animtion-page .load-content .text-1::before, .load-page.animtion-page .load-content .text-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.load-page.animtion-page .load-content .text-1::before {
+  overflow: hidden;
+  background: #1a1515;
+  width: 100%;
+}
+
+.load-page.animtion-page .load-content .text-1::after {
+  overflow: hidden;
+  width: .3rem;
+  background-color: #c8dc14;
+}
+
+.load-page.animtion-page .load-content .text-2 {
+  visibility: hidden;
+}
+
+.load-page.animtion-page .load-content .text-2::before, .load-page.animtion-page .load-content .text-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.load-page.animtion-page .load-content .text-2::before {
+  overflow: hidden;
+  background: #1a1515;
+  width: 100%;
+}
+
+.load-page.animtion-page .load-content .text-2::after {
+  overflow: hidden;
+  width: .3rem;
+  background-color: #c8dc14;
+}
+
+.load-page.animtion-page .load-content .text-3 {
+  visibility: hidden;
+}
+
+.load-page.animtion-page .load-content .text-3::before, .load-page.animtion-page .load-content .text-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.load-page.animtion-page .load-content .text-3::before {
+  overflow: hidden;
+  background-color: #1a1515;
+  width: 100%;
+}
+
+.load-page.animtion-page .load-content .text-3::after {
+  overflow: hidden;
+  width: .3rem;
+  background-color: #c8dc14;
+}
+
+.load-page.animtion-page .load-content .text-4 {
+  visibility: hidden;
+}
+
+.load-page.animtion-page .load-content .text-4::before, .load-page.animtion-page .load-content .text-4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.load-page.animtion-page .load-content .text-4::before {
+  overflow: hidden;
+  background-color: #1a1515;
+  width: 100%;
+}
+
+.load-page.animtion-page .load-content .text-4::after {
+  overflow: hidden;
+  width: .3rem;
+  background-color: #c8dc14;
+}
+
+.load-page.animtion-page .home-picture {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.load-page.animtion-page .home-footer {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.load-page.active-animtion {
+  /* styling for background image */
+  /* styleng for footer */
+}
+
+.load-page.active-animtion .load-content .text-1 {
   -webkit-animation: anime-text1 1.5s 4s forwards, anime-text1-second 1s 10s forwards, anime-text1-last 1.5s 17.5s forwards;
           animation: anime-text1 1.5s 4s forwards, anime-text1-second 1s 10s forwards, anime-text1-last 1.5s 17.5s forwards;
 }
 
-.load-page.active .load-content .text-1::before {
+.load-page.active-animtion .load-content .text-1::before {
   -webkit-animation: typeng-text1 3s steps(24) 1s forwards;
           animation: typeng-text1 3s steps(24) 1s forwards;
 }
 
-.load-page.active .load-content .text-1::after {
+.load-page.active-animtion .load-content .text-1::after {
   -webkit-animation: bank-typeng-text1 3s steps(24) 1s forwards, bank 0.6s steps(24) infinite;
           animation: bank-typeng-text1 3s steps(24) 1s forwards, bank 0.6s steps(24) infinite;
 }
 
-.load-page.active .load-content .text-2 {
+.load-page.active-animtion .load-content .text-2 {
   -webkit-animation: text-2-visibility 0s 5.5s forwards, anime-text2 1.5s 8.5s forwards, anime-text2-last 1.5s 17.5s forwards;
           animation: text-2-visibility 0s 5.5s forwards, anime-text2 1.5s 8.5s forwards, anime-text2-last 1.5s 17.5s forwards;
 }
 
-.load-page.active .load-content .text-2::before {
+.load-page.active-animtion .load-content .text-2::before {
   -webkit-animation: typeng-text2 3s steps(27) 5.5s forwards;
           animation: typeng-text2 3s steps(27) 5.5s forwards;
 }
 
-.load-page.active .load-content .text-2::after {
+.load-page.active-animtion .load-content .text-2::after {
   -webkit-animation: bank-typeng-text2 3s steps(27) 5.5s forwards, bank 0.6s steps(27) 5.5s infinite;
           animation: bank-typeng-text2 3s steps(27) 5.5s forwards, bank 0.6s steps(27) 5.5s infinite;
 }
 
-.load-page.active .load-content .text-3 {
+.load-page.active-animtion .load-content .text-3 {
   -webkit-animation: text-2-visibility 0s 11s forwards, anime-text3 1.5s 14s forwards, anime-text3-last 1.5s 17.5s forwards;
           animation: text-2-visibility 0s 11s forwards, anime-text3 1.5s 14s forwards, anime-text3-last 1.5s 17.5s forwards;
 }
 
-.load-page.active .load-content .text-3::before {
+.load-page.active-animtion .load-content .text-3::before {
   -webkit-animation: typeng-text2 3s steps(43) 11s forwards;
           animation: typeng-text2 3s steps(43) 11s forwards;
 }
 
-.load-page.active .load-content .text-3::after {
+.load-page.active-animtion .load-content .text-3::after {
   -webkit-animation: bank-typeng-text2 3s steps(43) 11s forwards, bank 0.6s steps(43) 11s infinite;
           animation: bank-typeng-text2 3s steps(43) 11s forwards, bank 0.6s steps(43) 11s infinite;
 }
 
-.load-page.active .load-content .text-4 {
+.load-page.active-animtion .load-content .text-4 {
   -webkit-animation: text-2-visibility 0s 15.5s forwards, anime-text4 1.5s 17.5s forwards;
           animation: text-2-visibility 0s 15.5s forwards, anime-text4 1.5s 17.5s forwards;
 }
 
-.load-page.active .load-content .text-4::before {
+.load-page.active-animtion .load-content .text-4::before {
   -webkit-animation: typeng-text4 1.5s steps(26) 15.5s forwards;
           animation: typeng-text4 1.5s steps(26) 15.5s forwards;
 }
 
-.load-page.active .load-content .text-4::after {
+.load-page.active-animtion .load-content .text-4::after {
   -webkit-animation: typeng-text4 1.5s steps(26) 15.5s forwards, bank 0.6s steps(26) 15.5s infinite;
           animation: typeng-text4 1.5s steps(26) 15.5s forwards, bank 0.6s steps(26) 15.5s infinite;
 }
 
-.load-page.active .home-picture {
+.load-page.active-animtion .home-picture {
   -webkit-animation: show-animation 1.5s 17.5s forwards;
           animation: show-animation 1.5s 17.5s forwards;
 }
 
-.load-page.active .home-footer {
+.load-page.active-animtion .home-footer {
   -webkit-animation: show-animation 1.5s 17.5s forwards;
           animation: show-animation 1.5s 17.5s forwards;
   /* creat styleng for scroll down*/
 }
 
-.load-page.active .home-footer .scroll-down .scroll-text {
-  -webkit-animation: flash-anime 1s infinite;
-          animation: flash-anime 1s infinite;
+.load-page.active-animtion .home-footer .scroll-down .col-right .s-icon-2 {
+  -webkit-animation: icon-down 1s infinite;
+          animation: icon-down 1s infinite;
 }
 
-.load-page.active .home-footer .scroll-down .col-right .s-icon-2 {
-  -webkit-animation: icon-down 1s infinite, flash-anime 1s infinite;
-          animation: icon-down 1s infinite, flash-anime 1s infinite;
+/* styling for clear cookies */
+.clear-cookies {
+  display: none;
+  width: 41px;
+  height: 44px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  position: absolute;
+  bottom: 11vh;
+  left: -3px;
+  z-index: 88;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  opacity: .8;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.clear-cookies.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clear-cookies img {
+  text-align: center;
+  width: 30px;
+}
+
+.clear-cookies:hover {
+  opacity: 1;
 }
 
 /* styleng for span's */
@@ -1642,7 +1740,6 @@ body {
   text-align: center;
   margin-bottom: 25px;
   position: relative;
-  opacity: 0;
   -webkit-transition: opacity 1s ease-out;
   transition: opacity 1s ease-out;
 }
@@ -1744,27 +1841,6 @@ body {
   margin-top: 5rem;
 }
 
-.section-services .cards .card-wep-development {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
-}
-
-.section-services .cards .card-web-design {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-}
-
-.section-services .cards .card-e-commers {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-}
-
 .section-services .cards .card:hover {
   opacity: 1;
   -webkit-box-shadow: 0px 0px 10px 0.1px rgba(255, 255, 255, 0.1);
@@ -1816,6 +1892,31 @@ body {
 
 .section-services .cards .card:hover .learn-more:hover::before {
   background-color: white;
+}
+
+.section-services.animtion-page .head-s-services {
+  opacity: 0;
+}
+
+.section-services.animtion-page .cards .card-wep-development {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+.section-services.animtion-page .cards .card-web-design {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.section-services.animtion-page .cards .card-e-commers {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
 }
 
 .section-services.scroll .head-s-services {
@@ -2035,6 +2136,8 @@ body {
   width: 100vw;
   background-color: white;
   font-family: "Source Code Pro", monospace;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
   /* remove section and add class active for restart section */
   display: none;
   /************** ANIMATION **************/
@@ -2157,7 +2260,6 @@ body {
   fill: none;
   stroke: url(#Color);
   stroke-dasharray: 312;
-  stroke-dashoffset: 312;
   stroke-width: 10px;
 }
 
@@ -2190,6 +2292,10 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.section-skills .skills-content .programing-language .html-bar .svg circle {
+  stroke-dashoffset: 78;
+}
+
 .section-skills .skills-content .programing-language .html-bar .bar-content {
   position: absolute;
   top: 40%;
@@ -2198,6 +2304,10 @@ body {
 
 .section-skills .skills-content .programing-language .html-bar .lung-nam {
   left: 33%;
+}
+
+.section-skills .skills-content .programing-language .css-bar .svg circle {
+  stroke-dashoffset: 93.6;
 }
 
 .section-skills .skills-content .programing-language .css-bar .bar-content {
@@ -2210,6 +2320,10 @@ body {
   left: 37%;
 }
 
+.section-skills .skills-content .programing-language .js-bar .svg circle {
+  stroke-dashoffset: 109.2;
+}
+
 .section-skills .skills-content .programing-language .js-bar .bar-content {
   position: absolute;
   top: 39%;
@@ -2218,6 +2332,10 @@ body {
 
 .section-skills .skills-content .programing-language .js-bar .lung-nam {
   left: 9%;
+}
+
+.section-skills .skills-content .programing-language .react-bar .svg circle {
+  stroke-dashoffset: 156;
 }
 
 .section-skills .skills-content .programing-language .react-bar .bar-content {
@@ -2230,6 +2348,10 @@ body {
   left: 31%;
 }
 
+.section-skills .skills-content .programing-language .bootstrap-bar .svg circle {
+  stroke-dashoffset: 62.4;
+}
+
 .section-skills .skills-content .programing-language .bootstrap-bar .bar-content {
   position: absolute;
   top: 39%;
@@ -2238,6 +2360,10 @@ body {
 
 .section-skills .skills-content .programing-language .bootstrap-bar .lung-nam {
   left: 13%;
+}
+
+.section-skills .skills-content .programing-language .wordpress-bar .svg circle {
+  stroke-dashoffset: 46.8;
 }
 
 .section-skills .skills-content .programing-language .wordpress-bar .bar-content {
@@ -2317,17 +2443,61 @@ body {
   margin-right: 1.7rem;
 }
 
+.section-skills .speaking-language .arabic-language .bar-counter::before {
+  width: 90%;
+}
+
 .section-skills .speaking-language .english-language .language-name {
   margin-right: 15px;
+}
+
+.section-skills .speaking-language .english-language .bar-counter::before {
+  width: 55%;
 }
 
 .section-skills .speaking-language .france-language .language-name {
   margin-right: 1.7rem;
 }
 
-.section-skills.start-work .skills-content {
-  /******************* programing language Call Animation ***********************/
-  /******************* speaking language Call Animation ***********************/
+.section-skills .speaking-language .france-language .bar-counter::before {
+  width: 40%;
+}
+
+.section-skills.animtion-page .skills-content .programing-language {
+  /* styling for HTML */
+  /* styling for CSS */
+  /* styling for JavaScipt */
+  /* styling for React */
+  /* styling for BootsTrap */
+  /* styling for WordPress */
+}
+
+.section-skills.animtion-page .skills-content .programing-language .html-bar .svg circle {
+  stroke-dashoffset: 312;
+}
+
+.section-skills.animtion-page .skills-content .programing-language .css-bar .svg circle {
+  stroke-dashoffset: 312;
+}
+
+.section-skills.animtion-page .skills-content .programing-language .js-bar .svg circle {
+  stroke-dashoffset: 312;
+}
+
+.section-skills.animtion-page .skills-content .programing-language .react-bar .svg circle {
+  stroke-dashoffset: 312;
+}
+
+.section-skills.animtion-page .skills-content .programing-language .bootstrap-bar .svg circle {
+  stroke-dashoffset: 312;
+}
+
+.section-skills.animtion-page .skills-content .programing-language .wordpress-bar .svg circle {
+  stroke-dashoffset: 312;
+}
+
+.section-skills.animtion-page .skills-content .programing-language .speaking-language .main-language .bar-counter::before {
+  width: 0%;
 }
 
 .section-skills.start-work .skills-content .programing-language .html-bar .svg circle {
@@ -2528,7 +2698,7 @@ body {
 }
 
 .contact-page-content .head-page .goback-link {
-  width: 15%;
+  width: 19%;
   padding-top: 20px;
   padding-left: 20px;
 }
@@ -2547,12 +2717,12 @@ body {
   padding-bottom: 2px;
   padding-bottom: 2px;
   border-bottom: solid 2px crimson;
-  opacity: .6;
+  opacity: .8;
 }
 
 .contact-page-content .head-page .goback-link a:hover {
   border-bottom: solid 2px rgba(220, 20, 60, 0.6);
-  opacity: .8;
+  opacity: 1;
 }
 
 .contact-page-content .head-page .goback-link a .icon {
@@ -2740,7 +2910,7 @@ body {
   max-height: 4rem !important;
   min-height: 4rem !important;
   margin: 20px 0;
-  padding: 5px;
+  padding: 10px;
 }
 
 .contact-page-content .body-page .main-card .card-content .left-card .contact-forms .button {

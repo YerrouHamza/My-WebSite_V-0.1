@@ -15,7 +15,7 @@
         background-color: black;
 
         .goback-link{
-            width: 15%;
+            width: 19%;
             padding-top: 20px;
             padding-left: 20px;
             a{
@@ -26,11 +26,11 @@
                 padding-bottom: 2px;
                 padding-bottom: 2px;
                 border-bottom: solid 2px crimson;
-                opacity: .6;
+                opacity: .8;
 
                 &:hover{
                     border-bottom: solid 2px rgba(220, 20, 60, 0.6);
-                    opacity: .8;
+                    opacity: 1;
                 }
 
                 .icon{
@@ -219,7 +219,7 @@
                             max-height: 4rem !important;
                             min-height: 4rem !important;
                             margin: 20px 0;
-                            padding: 5px;
+                            padding: 10px;
                         }
 
                         // styling for submit button

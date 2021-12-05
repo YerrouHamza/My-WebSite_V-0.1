@@ -25,28 +25,6 @@
             margin-left: 23%;
             margin-top: 15%;
             overflow: hidden;
-
-            &::before,
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-            }
-            
-            &::before{
-                overflow: hidden;
-                background: rgb(26, 21, 21);
-                width: 100%;
-
-            }
-
-            &::after{
-                overflow: hidden;
-                width: .3rem;
-                background-color: rgb(200, 220, 20);
-            }
         }
 
 
@@ -57,31 +35,6 @@
             width: max-content;
             margin-left: 23%;
             margin-top: 3%;
-
-            // creat hidden and then visibilty
-            visibility: hidden;
-
-            &::before,
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-            }
-            
-            &::before{
-                overflow: hidden;
-                background: rgb(26, 21, 21);
-                width: 100%;
-
-            }
-
-            &::after{
-                overflow: hidden;
-                width: .3rem;
-                background-color: rgb(200, 220, 20);
-            }
         }
 
 
@@ -93,31 +46,6 @@
             width: max-content;
             margin-left: 12%;
             margin-top: 5%;
-
-            // creat hidden and then visibilty
-            visibility: hidden;
-
-            &::before,
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-            }
-            
-            &::before{
-                overflow: hidden;
-                background-color: rgb(26, 21, 21);
-                width: 100%;
-
-            }
-
-            &::after{
-                overflow: hidden;
-                width: .3rem;
-                background-color: rgb(200, 220, 20);
-            }
         }
 
 
@@ -137,40 +65,11 @@
                     cursor: pointer !important;
                 }
             }
-
-            // creat hidden and then visibilty
-            visibility: hidden;
-
-            &::before,
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-            }
-            
-            &::before{
-                overflow: hidden;
-                background-color: rgb(26, 21, 21);
-                width: 100%;
-
-            }
-
-            &::after{
-                overflow: hidden;
-                width: .3rem;
-                background-color: rgb(200, 220, 20);
-            }
         }
     }
 
     /* styling for background image */
     .home-picture{
-
-        visibility: hidden;
-        opacity: 0;
-
         position: absolute;
         bottom: 15px;
         right: 60px;
@@ -194,10 +93,6 @@
     
     /* styleng for footer */
     .home-footer{
-        
-        visibility: hidden;
-        opacity: 0;
-        
         font-size: 1.1rem;
         width: 100%;
         display: flex;
@@ -322,10 +217,194 @@
         }
     }
 
+    /* if cookies === true */
+    &.active-page{
+        .load-content{
+            // styleng for text 1
+            .text-1{
+                font-size: 1.3rem;
+                margin-left: 12%;
+                margin-top: 16%;
+            }
+    
+    
+            // styleng for text 2
+            .text-2{
+                font-size: 2.8rem;
+                margin-left: 2%;
+                margin-top: 1%;
+            }
+    
+    
+    
+            // styleng for text 3
+            .text-3{
+                font-size: 1.5em;
+                margin-left: 12%;
+                margin-top: 1.6%;
+            }
+    
+    
+    
+            // styleng for text 4 
+            .text-4{
+                font-size: 1.5rem;
+                margin-left: 13%;
+                margin-top: 4%;
+            }
+        }
 
+        /* styleng for footer */
+        .home-footer{
+
+            /* creat styleng for scroll down*/
+            .scroll-down{
+                .col-right{
+                    .s-icon-2{
+                        animation: icon-down 1s infinite, //--
+                    }
+                }
+            }
+        }
+    }
+
+//---------------------------------------------------------------------------------
+
+    /* if cookies === false */
+    &.animtion-page{
+        .load-content{
+            // styleng for text 1
+            .text-1{
+                &::before,
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                }
+                
+                &::before{
+                    overflow: hidden;
+                    background: rgb(26, 21, 21);
+                    width: 100%;
+    
+                }
+    
+                &::after{
+                    overflow: hidden;
+                    width: .3rem;
+                    background-color: rgb(200, 220, 20);
+                }
+            }
+    
+    
+            // styleng for text 2
+            .text-2{
+                // creat hidden and then visibilty
+                visibility: hidden;
+    
+                &::before,
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                }
+                
+                &::before{
+                    overflow: hidden;
+                    background: rgb(26, 21, 21);
+                    width: 100%;
+    
+                }
+    
+                &::after{
+                    overflow: hidden;
+                    width: .3rem;
+                    background-color: rgb(200, 220, 20);
+                }
+            }
+    
+    
+    
+            // styleng for text 3
+            .text-3{
+                // creat hidden and then visibilty
+                visibility: hidden;
+    
+                &::before,
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                }
+                
+                &::before{
+                    overflow: hidden;
+                    background-color: rgb(26, 21, 21);
+                    width: 100%;
+    
+                }
+    
+                &::after{
+                    overflow: hidden;
+                    width: .3rem;
+                    background-color: rgb(200, 220, 20);
+                }
+            }
+    
+    
+    
+            // styleng for text 4 
+            .text-4{
+                // creat hidden and then visibilty
+                visibility: hidden;
+    
+                &::before,
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                }
+                
+                &::before{
+                    overflow: hidden;
+                    background-color: rgb(26, 21, 21);
+                    width: 100%;
+    
+                }
+    
+                &::after{
+                    overflow: hidden;
+                    width: .3rem;
+                    background-color: rgb(200, 220, 20);
+                }
+            }
+        }
+    
+        /* styling for background image */
+        .home-picture{
+    
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        /* styleng for footer */
+        .home-footer{
+            
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
 
     /** creat active class if click for after load page **/
-    &.active{
+    &.active-animtion{
 
         .load-content{
 
@@ -421,15 +500,9 @@
 
             /* creat styleng for scroll down*/
             .scroll-down{
-                
-                .scroll-text{
-                    animation: flash-anime 1s infinite; //--
-                }
-
                 .col-right{
                     .s-icon-2{
                         animation: icon-down 1s infinite, //--
-                        flash-anime 1s infinite;
                     }
                 }
             }
@@ -437,7 +510,45 @@
     }
 }
 
+/* styling for clear cookies */
+.clear-cookies{
 
+    display: none;
+
+    &.active{
+        display: flex;
+    }
+
+    width: 41px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    
+    position: absolute;
+    bottom: 11vh;
+    left: -3px;
+
+    z-index: 88;
+    
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    cursor: pointer;
+
+    opacity: .8;
+
+    transition: all .2s ease-in-out;
+    img{
+        text-align: center;
+        width: 30px;
+    }
+
+    &:hover{
+        opacity: 1;
+    }
+}
 
 /* styleng for span's */
 .br-1 {

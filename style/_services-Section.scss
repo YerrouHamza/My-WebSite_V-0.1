@@ -25,7 +25,7 @@
         text-align: center;
         margin-bottom: 25px;
         position: relative;
-        opacity: 0;
+        
 
         transition: opacity 1s ease-out;
 
@@ -118,27 +118,6 @@
             }
         }
 
-        // styleng for card-wep-development.
-        .card-wep-development{
-            opacity: 0;
-            visibility: hidden;
-            transform: translateX(-100px);
-        }
-
-        // styleng for  card-web-design.
-        .card-web-design{
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(100px);
-        }
-
-        // styleng for  card-e-commers.
-        .card-e-commers{
-            opacity: 0;
-            visibility: hidden;
-            transform: translateX(100px);
-        }
-
         // creat styleng for hover mix blogs.
         .card:hover{
             opacity: 1;
@@ -191,6 +170,40 @@
         }
     }
 
+
+    // creat On scroll 
+    &.animtion-page{
+        // styleng for services header. 
+        .head-s-services{
+            // styleng animetion for services header.
+            opacity: 0;
+        }
+
+        // styleng for services blogs.
+        .cards{ 
+            // styleng for card-wep-development.
+            .card-wep-development{
+                visibility: hidden;
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            // styleng for  card-web-design.
+            .card-web-design{
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            // styleng for  card-e-commers.
+            .card-e-commers{
+                visibility: hidden;
+                opacity: 0;
+                transform: translateX(100px);
+            }
+        }
+    }
+
     // creat On scroll 
     &.scroll{
         // styleng for services header. 
@@ -235,8 +248,6 @@
 
 
 /* Creat Media Query For Services Section */
-
-
 
 // media for down 1090px.
 @media (max-width: 1090px){
