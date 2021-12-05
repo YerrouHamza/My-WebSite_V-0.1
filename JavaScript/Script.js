@@ -185,7 +185,7 @@
     
             // get cookies value after active page
             setTimeout(() => {
-                document.cookie = "value=true; path='/'";
+                document.cookie = "value=true; path=/;";
             }, 20000);  // 20000.
         });
 
@@ -247,7 +247,12 @@
 //-------------------------- Clear Cookies Function ------------------------------------------------------//
 
 clearCookies.addEventListener('click', () => {
-    document.cookie = "value=true; 01 Jan 1970 00:00:00 UTC; path='/'";
+    document.cookie = "value=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    if( cookies.value == null ){
+        alert('Done! Cookies is clear');
+    } else {
+        alert('Error! Please try agen.');
+    }
     console.log(cookies.value);
 })
 
