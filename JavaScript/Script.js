@@ -15,7 +15,6 @@
 
     // get Clear Cookies From sitweb.
     const clearCookies = document.querySelector('#clear-cookies');
-    const oldDate = '01 Jan 1970 00:00:00 UTC';
 
 /* Selected Elements */
 
@@ -30,6 +29,14 @@
     const munoLinks = document.querySelector('.muno');
             //---- get about me bottun from mune.
         const navAboutMe = document.querySelector('#navbar .head-nav .muno .about-me');
+            //---- get home logo link from muno
+            const navHomeLogo = document.querySelector('#logo-nav-link');
+            //---- get home link from muno
+            const navHome = document.querySelector('#home-nav-link');
+            //---- get services link from muno
+            const navServices = document.querySelector('#services-nav-link');
+            //---- get skills link from muno
+            const navSkills = document.querySelector('#skills-nav-link');
 
             //--- Get Muno Button.
     const munoButton = document.querySelector('header .muno-button');
@@ -51,7 +58,8 @@
         /* // Get About Section. // */
     const aboutSection = document.querySelector('.main-about'); // Get About Section.
     const closeAboutIcon = document.getElementById('about-me-close-icon'); // Get about close icon 
-
+                // get skill button from about
+            const skillAboutB = document.querySelector('#skills-about-b')
 
 
         /* // Get services section // */
@@ -81,34 +89,30 @@
             let franceSPKNumber = document.querySelector('#france-counter');
 
 
-//--------------------------------------------------------------------------------//
-    /******** Javascript for On Loadeng  **********/
+//--------------------------------/* Loading Page */------------------------------------------------//
 
-/* Loading Page */
-
-
-        /* Creat My Name Text for load Page Text 2 */
-        const tag1MyName = document.querySelector('.load-page .text-2 .my-name #tag-1');
-        const text2MyName_name = document.querySelector('.load-page .text-2 .my-name #name');
-        const tag2MyName = document.querySelector('.load-page .text-2 .my-name #tag-2');
-        
-        tag1MyName.textContent = `<h2>`;
-        text2MyName_name.textContent = `Yerrou Hamza`;
-        tag2MyName.textContent = `</h2>`;
-        
-        
-                /* Creat My Name Text for load Page Text 4 */
-        const buttonTag1 = document.querySelector('#tag-b-1')
-            buttonTag2 = document.querySelector('#tag-b-2'),
-            buttonContent = document.querySelector('.content-button');
-        
-        buttonTag1.textContent = `<button>`;
-        buttonContent.textContent = `About Me`;
-        buttonTag2.textContent = `</button>`;
+    /* Creat My Name Text for load Page Text 2 */
+    const tag1MyName = document.querySelector('.load-page .text-2 .my-name #tag-1');
+    const text2MyName_name = document.querySelector('.load-page .text-2 .my-name #name');
+    const tag2MyName = document.querySelector('.load-page .text-2 .my-name #tag-2');
+    
+    tag1MyName.textContent = `<h2>`;
+    text2MyName_name.textContent = `Yerrou Hamza`;
+    tag2MyName.textContent = `</h2>`;
+    
+    
+            /* Creat My Name Text for load Page Text 4 */
+    const buttonTag1 = document.querySelector('#tag-b-1')
+        buttonTag2 = document.querySelector('#tag-b-2'),
+        buttonContent = document.querySelector('.content-button');
+    
+    buttonTag1.textContent = `<button>`;
+    buttonContent.textContent = `About Me`;
+    buttonTag2.textContent = `</button>`;
 
 
 
-//--------------------------------------------------------------------------------//
+//---------------------- JavaScript Function's ------------------------//
 
     /* Add Event Listener & use white cookies */
     if (cookies.value == 'true') {
@@ -194,6 +198,8 @@
     }
 
 
+
+
 //--------------------------------------------------------------------------------//
 
     // creat function For call and close about section
@@ -213,7 +219,6 @@
 
 //--------------------------------------------------------------------------------//
 
-    /* Creat Functions */
         //- on scroll function
     window.addEventListener('scroll', function () {
 
@@ -241,20 +246,44 @@
     });
 
 
+//-------------------------- click in nav links to go to section --------------------//
 
+    navHomeLogo.addEventListener('click', () => { // for home from logo nav link
+        aboutSection.classList.remove('active'); // on click remove class active from about popup.
+        window.scrollTo(0, 0);
+    });
+
+    navHome.addEventListener('click', () => { // for home from nav link
+        aboutSection.classList.remove('active'); // on click remove class active from about popup.
+        window.scrollTo(0, 0);
+    });
+
+    navServices.addEventListener('click', () => { // for srvices from nav link
+        aboutSection.classList.remove('active'); // on click remove class active from about popup.
+        window.scrollTo(0, 620);
+    });
+
+    navSkills.addEventListener('click', () => { // for skills from nav link
+        aboutSection.classList.remove('active'); // on click remove class active from about popup.
+        window.scrollTo(0, 1300);
+        console.log('work skill')
+    });
         
+    skillAboutB.addEventListener('click', () => { // for skills from about
+        aboutSection.classList.remove('active'); // on click remove class active from about popup.
+        window.scrollTo(0, 1300);
+        console.log('work skill')
+    });
+//-------------------- Clear Cookies Function ------------------//
 
-//-------------------------- Clear Cookies Function ------------------------------------------------------//
-
-clearCookies.addEventListener('click', () => {
-    document.cookie = "value=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    if( cookies.value == null ){
-        alert('Done! Cookies is clear');
-    } else {
-        alert('Error! Please try agen.');
-    }
-    console.log(cookies.value);
-})
+    clearCookies.addEventListener('click', () => {
+        document.cookie = "value=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        if(cookies.value == 'true'){
+            alert('Done! Cookies is clear');
+        } else {
+            null
+        }
+    })
 
 
 

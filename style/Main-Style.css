@@ -1280,6 +1280,16 @@ header.scroll .head-nav .muno li a:hover {
   opacity: 1;
 }
 
+header.scroll .head-nav .muno li button {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: .9;
+}
+
+header.scroll .head-nav .muno li button:hover {
+  color: white;
+  opacity: 1;
+}
+
 header .head-nav {
   width: 100vw;
   display: -webkit-box;
@@ -1326,7 +1336,8 @@ header .head-nav .muno li {
   padding: 0 15px;
 }
 
-header .head-nav .muno a {
+header .head-nav .muno a,
+header .head-nav .muno button {
   font-size: 1.2rem;
   font-weight: 600;
   font-family: "Source Code Pro", monospace;
@@ -1335,12 +1346,21 @@ header .head-nav .muno a {
   border-bottom: 2px solid transparent;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
 }
 
-header .head-nav .muno a:hover {
+header .head-nav .muno a:hover,
+header .head-nav .muno button:hover {
   color: white;
   opacity: 1;
   border-bottom: 2px solid white;
+}
+
+header .head-nav .muno button {
+  background: none;
 }
 
 /* Creat Media Query For Header */
@@ -1703,6 +1723,7 @@ body {
   border-radius: 3px;
   opacity: .9;
   padding: 9px 20px;
+  cursor: pointer;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
 }

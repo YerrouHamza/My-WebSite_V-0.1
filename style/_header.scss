@@ -16,6 +16,8 @@
         position: fixed;
         z-index: 99999;
         transition: all 0.5s ease;
+
+
         // add Style for scroll class.
         &.scroll{
             background-color: $primory-color;
@@ -40,8 +42,19 @@
                         opacity: 1;
                     }
                 }
+
+                .muno li button{
+                    color: rgba(255, 255, 255, 0.9);
+                    opacity: .9;
+                    &:hover{
+                        color: white;
+                        opacity: 1;
+                    }
+                }
             } 
         }
+
+
         .head-nav{
             width: 100vw;
             display: flex;
@@ -74,7 +87,8 @@
                 li{
                     padding: 0 15px;
                 }
-                a{
+                a,
+                button{
                     font-size: 1.2rem;
                     font-weight: 600;
                     font-family: $primory-font-family-Poppins;
@@ -82,12 +96,21 @@
                     opacity: .9;
                     border-bottom: 2px solid transparent;
                     transition: all .5s ease-in-out;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+
+                    cursor: pointer;
                     &:hover{
                         color: white;
                         opacity: 1;
                         border-bottom: 2px solid white;
                         
                     }
+                }
+
+                button{
+                    background: none;
                 }
             }
         }
