@@ -226,11 +226,11 @@
         if (this.scrollY > 10){
             //- if scroll Window navBar add Class Scroll.
             HeaderNav.classList.add('scroll');
-            logo.setAttribute('src', '/Photos/Logo-2.png');
+            logo.setAttribute('src', 'Photos/Logo-2.png');
         } else {
             //- else this navBar Remove Class Scroll.
             HeaderNav.classList.remove('scroll');
-            logo.setAttribute('src', '/Photos/Logo-1.png');
+            logo.setAttribute('src', 'Photos/Logo-1.png');
         };
 
 
